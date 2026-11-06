@@ -1,0 +1,2272 @@
+{
+ "config": {
+  "members": {
+   "man": 0.0,
+   "woman": 1.0
+  },
+  "model": "StandardScaler + MLPClassifier(100, 50), alpha=0.001, max_iter=1000, random_state=seed",
+  "n": 1000,
+  "n_bad": 300,
+  "n_savings_missing": 183,
+  "n_women": 310,
+  "pw_rules": [
+   "age_only_0.4",
+   "age_only_0.8",
+   "matched_0.4",
+   "matched_0.8"
+  ],
+  "reference": {
+   "age": 34.0,
+   "amount": 1569.0,
+   "savings": 1.0
+  },
+  "splits": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "test_size": 0.5
+ },
+ "mediator_dependence": [
+  {
+   "female": 0,
+   "n": 195,
+   "p": 0.4948866963777719,
+   "pair": "savings level vs amount",
+   "rho": 0.04916546103581086
+  },
+  {
+   "female": 0,
+   "n": 243,
+   "p": 0.005793026672653682,
+   "pair": "savings missing vs amount",
+   "rho": 0.17652543231093457
+  },
+  {
+   "female": 1,
+   "n": 55,
+   "p": 0.24333697039568794,
+   "pair": "savings level vs amount",
+   "rho": -0.1599747836461016
+  },
+  {
+   "female": 1,
+   "n": 66,
+   "p": 0.5683756119328097,
+   "pair": "savings missing vs amount",
+   "rho": -0.07149302332381571
+  }
+ ],
+ "meta": {
+  "date": "2026-10-26",
+  "deps": [
+   "experiments/exp8_german.py",
+   "pe_shap/baselines/pwshap.py",
+   "pe_shap/data.py",
+   "pe_shap/estimands.py",
+   "pe_shap/faithfulness.py",
+   "pe_shap/game.py",
+   "pe_shap/io.py",
+   "pe_shap/models.py",
+   "pe_shap/sampler.py"
+  ],
+  "deps_digest": "d80428e647892c8ed5af7e05cf097cdd59f61268b4867c6728150fdcc021fdeb",
+  "git": "no-git",
+  "mode": "full",
+  "nullable": [
+   "pw.age_only_0.4.savings",
+   "pw.age_only_0.4.amount",
+   "pw.age_only_0.4.savings_larger",
+   "pw.age_only_0.8.savings",
+   "pw.age_only_0.8.amount",
+   "pw.age_only_0.8.savings_larger",
+   "pw.matched_0.4.savings",
+   "pw.matched_0.4.amount",
+   "pw.matched_0.4.savings_larger",
+   "pw.matched_0.8.savings",
+   "pw.matched_0.8.amount",
+   "pw.matched_0.8.savings_larger"
+  ],
+  "script": "experiments/exp8_german.py",
+  "source_digest": "5faf23483166d020e5a54dba41701e4632e0749a94de78fd2f0974e3d6709dd6",
+  "versions": {
+   "numpy": "2.4.4",
+   "pandas": "3.0.2",
+   "platform": "macOS-26.3.1-arm64-arm-64bit",
+   "python": "3.12.10",
+   "scikit-learn": "1.8.0",
+   "scipy": "1.17.1"
+  }
+ },
+ "runs": [
+  {
+   "acc_test": 0.654,
+   "acc_train": 0.838,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.19445285168962467,
+     "comp_both": 0.21405386189301723,
+     "comp_savings": 0.19635633425481525,
+     "gap": 0.001903482565190573,
+     "n_donors": 343,
+     "p_bad": 0.04508823488310121
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.2122967318811061,
+     "comp_both": 0.2644807122772841,
+     "comp_savings": 0.22965307426248804,
+     "gap": 0.01735634238138195,
+     "n_donors": 157,
+     "p_bad": 0.5916251478230754
+    }
+   },
+   "pair_gap": 0.5465369129399742,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.38776980755696994,
+     "min_donors": {
+      "amount": 37,
+      "savings": 37
+     },
+     "savings": -0.4075146509906463,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.43767747230199067,
+     "min_donors": {
+      "amount": 79,
+      "savings": 79
+     },
+     "savings": -0.44402243263874425,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.19401444854766148,
+     "min_donors": {
+      "amount": 3,
+      "savings": 22
+     },
+     "savings": -0.43033826883462767,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.4208480126487939,
+     "min_donors": {
+      "amount": 5,
+      "savings": 44
+     },
+     "savings": -0.4664674577580019,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 0,
+   "unweighted": {
+    "ate": 0.05121649837867692,
+    "lam_all": -0.17454217545051914,
+    "phi": {
+     "amount": -0.1219823316373691,
+     "savings": -0.05255984381315004
+    },
+    "savings_larger": 0.0
+   },
+   "weighted": {
+    "ate": 0.016780594925970005,
+    "lam_all": -0.1678793630939503,
+    "phi": {
+     "amount": -0.10603455421393955,
+     "savings": -0.061844808880010746
+    },
+    "savings_larger": 0.0
+   }
+  },
+  {
+   "acc_test": 0.648,
+   "acc_train": 0.834,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.007187535318628369,
+     "comp_both": 0.015237845871330924,
+     "comp_savings": 0.04691994125619592,
+     "gap": 0.05410747657482429,
+     "n_donors": 351,
+     "p_bad": 0.2895740614796247
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.10565002950899571,
+     "comp_both": 0.018917393330088128,
+     "comp_savings": 0.04070414000549605,
+     "gap": -0.06494588950349967,
+     "n_donors": 149,
+     "p_bad": 0.6273606467994307
+    }
+   },
+   "pair_gap": 0.337786585319806,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.08436295748840805,
+     "min_donors": {
+      "amount": 34,
+      "savings": 34
+     },
+     "savings": -0.07194588714520322,
+     "savings_larger": 0.0
+    },
+    "age_only_0.8": {
+     "amount": -0.09913765200995672,
+     "min_donors": {
+      "amount": 76,
+      "savings": 76
+     },
+     "savings": -0.09040591018363286,
+     "savings_larger": 0.0
+    },
+    "matched_0.4": {
+     "amount": 0.005087470463205901,
+     "min_donors": {
+      "amount": 2,
+      "savings": 20
+     },
+     "savings": -0.08813109746243608,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.07499178730711298,
+     "min_donors": {
+      "amount": 6,
+      "savings": 45
+     },
+     "savings": -0.10407884525493749,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 1,
+   "unweighted": {
+    "ate": 0.15553529869916893,
+    "lam_all": 0.09210168158402082,
+    "phi": {
+     "amount": 0.029896317417009224,
+     "savings": 0.0622053641670116
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.1060585527273431,
+    "lam_all": 0.08457708608688963,
+    "phi": {
+     "amount": 0.028127564069801297,
+     "savings": 0.05644952201708833
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.65,
+   "acc_train": 0.83,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.06339959271310691,
+     "comp_both": 0.0885881366206881,
+     "comp_savings": 0.12056079902756711,
+     "gap": 0.0571612063144602,
+     "n_donors": 351,
+     "p_bad": 0.09869180034609595
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.030047172425954893,
+     "comp_both": 0.1417842008400787,
+     "comp_savings": 0.1630489305753997,
+     "gap": 0.1930961030013546,
+     "n_donors": 149,
+     "p_bad": 0.26779031331089753
+    }
+   },
+   "pair_gap": 0.16909851296480158,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.09263280685719125,
+     "min_donors": {
+      "amount": 25,
+      "savings": 25
+     },
+     "savings": 0.04754017935002994,
+     "savings_larger": 0.0
+    },
+    "age_only_0.8": {
+     "amount": -0.11207218293187085,
+     "min_donors": {
+      "amount": 81,
+      "savings": 81
+     },
+     "savings": 0.05194359734892087,
+     "savings_larger": 0.0
+    },
+    "matched_0.4": {
+     "amount": -0.04422392058953306,
+     "min_donors": {
+      "amount": 2,
+      "savings": 16
+     },
+     "savings": 0.013649325379049365,
+     "savings_larger": 0.0
+    },
+    "matched_0.8": {
+     "amount": -0.10996223574897121,
+     "min_donors": {
+      "amount": 7,
+      "savings": 46
+     },
+     "savings": 0.0424141171452832,
+     "savings_larger": 0.0
+    }
+   },
+   "seed": 2,
+   "unweighted": {
+    "ate": 0.12602347001127928,
+    "lam_all": -0.24958144211426658,
+    "phi": {
+     "amount": -0.1692825404504545,
+     "savings": -0.08029890166381211
+    },
+    "savings_larger": 0.0
+   },
+   "weighted": {
+    "ate": 0.0962924276548432,
+    "lam_all": -0.17046241652354704,
+    "phi": {
+     "amount": -0.11654534307370204,
+     "savings": -0.053917073449845004
+    },
+    "savings_larger": 0.0
+   }
+  },
+  {
+   "acc_test": 0.682,
+   "acc_train": 0.806,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.15949817893150564,
+     "comp_both": 0.09770483189854529,
+     "comp_savings": 0.07691349830112426,
+     "gap": -0.08258468063038138,
+     "n_donors": 361,
+     "p_bad": 0.12622470470524816
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.09598876170123372,
+     "comp_both": 0.2495133703885764,
+     "comp_savings": 0.22327981670629465,
+     "gap": 0.12729105500506094,
+     "n_donors": 139,
+     "p_bad": 0.6121625467255889
+    }
+   },
+   "pair_gap": 0.48593784202034074,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.23035067271916376,
+     "min_donors": {
+      "amount": 28,
+      "savings": 28
+     },
+     "savings": -0.33213589228759444,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.28797521904933376,
+     "min_donors": {
+      "amount": 65,
+      "savings": 65
+     },
+     "savings": -0.3134745732968155,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.27222346411798654,
+     "min_donors": {
+      "amount": 1,
+      "savings": 18
+     },
+     "savings": -0.35105585564654296,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.39713793473341247,
+     "min_donors": {
+      "amount": 5,
+      "savings": 39
+     },
+     "savings": -0.32595710440746095,
+     "savings_larger": 0.0
+    }
+   },
+   "seed": 3,
+   "unweighted": {
+    "ate": 0.11683236637080374,
+    "lam_all": -0.1273030017868848,
+    "phi": {
+     "amount": -0.09310260607365287,
+     "savings": -0.03420039571323194
+    },
+    "savings_larger": 0.0
+   },
+   "weighted": {
+    "ate": 0.054037192518154364,
+    "lam_all": -0.1513986827246775,
+    "phi": {
+     "amount": -0.08101871548903412,
+     "savings": -0.07037996723564337
+    },
+    "savings_larger": 0.0
+   }
+  },
+  {
+   "acc_test": 0.69,
+   "acc_train": 0.792,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.12216241459310495,
+     "comp_both": 0.2981678495041631,
+     "comp_savings": 0.33709350891431145,
+     "gap": 0.2149310943212065,
+     "n_donors": 353,
+     "p_bad": 0.020100039774167976
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.030815650008892248,
+     "comp_both": -0.08761739299780602,
+     "comp_savings": -0.19195300034984797,
+     "gap": -0.22276865035874022,
+     "n_donors": 147,
+     "p_bad": 0.47280789095353304
+    }
+   },
+   "pair_gap": 0.4527078511793651,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.04041856214131434,
+     "min_donors": {
+      "amount": 32,
+      "savings": 32
+     },
+     "savings": -0.5472641258887088,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.1068027091531552,
+     "min_donors": {
+      "amount": 81,
+      "savings": 81
+     },
+     "savings": -0.541926924983698,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.06201521021124323,
+     "min_donors": {
+      "amount": 2,
+      "savings": 20
+     },
+     "savings": -0.5812260312234105,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.16559059728780623,
+     "min_donors": {
+      "amount": 7,
+      "savings": 49
+     },
+     "savings": -0.5452168915625402,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 4,
+   "unweighted": {
+    "ate": 0.05533087495813599,
+    "lam_all": -0.24920540384638917,
+    "phi": {
+     "amount": -0.02768411754716979,
+     "savings": -0.22152128629921938
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.023160906514140767,
+    "lam_all": -0.25998109336859815,
+    "phi": {
+     "amount": -0.03418353796127631,
+     "savings": -0.22579755540732183
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.684,
+   "acc_train": 0.82,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.028894772658754175,
+     "comp_both": 0.10497834077042456,
+     "comp_savings": 0.12553241601265686,
+     "gap": 0.09663764335390268,
+     "n_donors": 348,
+     "p_bad": 0.18937890532430535
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.08710677773343678,
+     "comp_both": -0.003029532439532745,
+     "comp_savings": 0.1819280959206086,
+     "gap": 0.2690348736540454,
+     "n_donors": 152,
+     "p_bad": 0.39773932755746755
+    }
+   },
+   "pair_gap": 0.2083604222331622,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.15785869284243242,
+     "min_donors": {
+      "amount": 30,
+      "savings": 30
+     },
+     "savings": 0.03541691844532274,
+     "savings_larger": 0.0
+    },
+    "age_only_0.8": {
+     "amount": -0.137980009467584,
+     "min_donors": {
+      "amount": 85,
+      "savings": 85
+     },
+     "savings": 0.03851387712515991,
+     "savings_larger": 0.0
+    },
+    "matched_0.4": {
+     "amount": 0.16278685551907435,
+     "min_donors": {
+      "amount": 1,
+      "savings": 17
+     },
+     "savings": 0.032740227810601485,
+     "savings_larger": 0.0
+    },
+    "matched_0.8": {
+     "amount": -0.1711458520181843,
+     "min_donors": {
+      "amount": 3,
+      "savings": 51
+     },
+     "savings": 0.020262582684303587,
+     "savings_larger": 0.0
+    }
+   },
+   "seed": 5,
+   "unweighted": {
+    "ate": 0.016199464528186824,
+    "lam_all": -0.005351972692141216,
+    "phi": {
+     "amount": 0.010942091489813621,
+     "savings": -0.016294064181954837
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": -0.04673350033682375,
+    "lam_all": -0.014505796142010835,
+    "phi": {
+     "amount": 0.0004521704246699121,
+     "savings": -0.014957966566680747
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.676,
+   "acc_train": 0.806,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.003388453942248071,
+     "comp_both": -0.03783396440898301,
+     "comp_savings": -0.10642947227951338,
+     "gap": -0.10981792622176145,
+     "n_donors": 337,
+     "p_bad": 0.2508667247823907
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.12714127425708832,
+     "comp_both": 0.19283068262452074,
+     "comp_savings": 0.14249783010591277,
+     "gap": 0.015356555848824449,
+     "n_donors": 163,
+     "p_bad": 0.6867375161632252
+    }
+   },
+   "pair_gap": 0.4358707913808345,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.1420356593857634,
+     "min_donors": {
+      "amount": 33,
+      "savings": 33
+     },
+     "savings": -0.046544352605468964,
+     "savings_larger": 0.0
+    },
+    "age_only_0.8": {
+     "amount": -0.13280178648913615,
+     "min_donors": {
+      "amount": 85,
+      "savings": 85
+     },
+     "savings": -0.04792101199516119,
+     "savings_larger": 0.0
+    },
+    "matched_0.4": {
+     "amount": -0.021139557931956543,
+     "min_donors": {
+      "amount": 1,
+      "savings": 19
+     },
+     "savings": -0.05033207316557342,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.11726295342541304,
+     "min_donors": {
+      "amount": 5,
+      "savings": 48
+     },
+     "savings": -0.048183733465908984,
+     "savings_larger": 0.0
+    }
+   },
+   "seed": 6,
+   "unweighted": {
+    "ate": 0.05405848706568411,
+    "lam_all": -0.1853030224364494,
+    "phi": {
+     "amount": -0.06164873402273045,
+     "savings": -0.12365428841371894
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.05270056493254188,
+    "lam_all": -0.13531800939231647,
+    "phi": {
+     "amount": -0.043986120098986364,
+     "savings": -0.09133188929333011
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.67,
+   "acc_train": 0.8,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.11828899870423504,
+     "comp_both": 0.04591787285250226,
+     "comp_savings": -0.019115911260657592,
+     "gap": -0.13740490996489263,
+     "n_donors": 346,
+     "p_bad": 0.1667158593373481
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.05154732064940337,
+     "comp_both": -0.17153753349117407,
+     "comp_savings": -0.21703135733275714,
+     "gap": -0.16548403668335376,
+     "n_donors": 154,
+     "p_bad": 0.47298729409897994
+    }
+   },
+   "pair_gap": 0.3062714347616319,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.153634172062252,
+     "min_donors": {
+      "amount": 42,
+      "savings": 42
+     },
+     "savings": -0.20363691946926774,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.15956637445351796,
+     "min_donors": {
+      "amount": 72,
+      "savings": 72
+     },
+     "savings": -0.20266253479735957,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.00021006249314114989,
+     "min_donors": {
+      "amount": 2,
+      "savings": 28
+     },
+     "savings": -0.21287568122855868,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.15426031185691713,
+     "min_donors": {
+      "amount": 4,
+      "savings": 46
+     },
+     "savings": -0.21113046527081472,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 7,
+   "unweighted": {
+    "ate": 0.11308230237673281,
+    "lam_all": 0.012264831660561415,
+    "phi": {
+     "amount": -0.01662079468867582,
+     "savings": 0.028885626349237234
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.053958006210541365,
+    "lam_all": 0.021824633230974277,
+    "phi": {
+     "amount": -0.015431456281993064,
+     "savings": 0.03725608951296734
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.674,
+   "acc_train": 0.806,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.08438692250492019,
+     "comp_both": 0.09081839895849941,
+     "comp_savings": 0.051117480330875154,
+     "gap": -0.03326944217404504,
+     "n_donors": 359,
+     "p_bad": 0.05060034844086614
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.05553713914538061,
+     "comp_both": 0.21372691467131727,
+     "comp_savings": 0.17696490422304478,
+     "gap": 0.12142776507766417,
+     "n_donors": 141,
+     "p_bad": 0.6541284941981321
+    }
+   },
+   "pair_gap": 0.603528145757266,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.17697359802935997,
+     "min_donors": {
+      "amount": 30,
+      "savings": 30
+     },
+     "savings": -0.24809770353176053,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.16035651633194292,
+     "min_donors": {
+      "amount": 76,
+      "savings": 76
+     },
+     "savings": -0.2375089071881471,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.07153274961847456,
+     "min_donors": {
+      "amount": 3,
+      "savings": 19
+     },
+     "savings": -0.22810194692849228,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.18144911418930232,
+     "min_donors": {
+      "amount": 5,
+      "savings": 46
+     },
+     "savings": -0.21999459381804864,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 8,
+   "unweighted": {
+    "ate": 0.10388380183631393,
+    "lam_all": -0.2415960398717136,
+    "phi": {
+     "amount": -0.03134694994203048,
+     "savings": -0.2102490899296831
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.09838281820723122,
+    "lam_all": -0.1648343907022249,
+    "phi": {
+     "amount": -0.006498743004231963,
+     "savings": -0.1583356476979929
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.686,
+   "acc_train": 0.83,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.024177648751617098,
+     "comp_both": 0.11125927429963045,
+     "comp_savings": 0.05987636269068908,
+     "gap": 0.03569871393907198,
+     "n_donors": 333,
+     "p_bad": 0.085764078764569
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.054598989251908314,
+     "comp_both": 0.02177496136162549,
+     "comp_savings": -0.014309891526745666,
+     "gap": -0.06890888077865398,
+     "n_donors": 167,
+     "p_bad": 0.31066061604476514
+    }
+   },
+   "pair_gap": 0.22489653728019615,
+   "pw": {
+    "age_only_0.4": {
+     "amount": 0.04006121667897433,
+     "min_donors": {
+      "amount": 37,
+      "savings": 37
+     },
+     "savings": -0.07466511128014955,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": 0.029049626768837156,
+     "min_donors": {
+      "amount": 95,
+      "savings": 95
+     },
+     "savings": -0.07655650087589694,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": 0.0329582739047411,
+     "min_donors": {
+      "amount": 3,
+      "savings": 23
+     },
+     "savings": -0.09047991368340455,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": 0.02601288372689875,
+     "min_donors": {
+      "amount": 5,
+      "savings": 55
+     },
+     "savings": -0.08496177614115452,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 9,
+   "unweighted": {
+    "ate": 0.0695178263861628,
+    "lam_all": -0.26076934261738405,
+    "phi": {
+     "amount": -0.022684754566694054,
+     "savings": -0.23808458805069
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.03245357592012549,
+    "lam_all": -0.15165254670458345,
+    "phi": {
+     "amount": 0.023898794266737217,
+     "savings": -0.17555134097132066
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.682,
+   "acc_train": 0.818,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.09504263727268691,
+     "comp_both": 0.24558947843802492,
+     "comp_savings": 0.24352577169643108,
+     "gap": 0.14848313442374417,
+     "n_donors": 356,
+     "p_bad": 0.054585443934178815
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.009006343889415125,
+     "comp_both": 0.28662490373298066,
+     "comp_savings": 0.364552706685084,
+     "gap": 0.35554636279566887,
+     "n_donors": 144,
+     "p_bad": 0.06741801182092116
+    }
+   },
+   "pair_gap": 0.01283256788674235,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.08927730608269996,
+     "min_donors": {
+      "amount": 30,
+      "savings": 30
+     },
+     "savings": 0.15392404551739747,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.09796585097347094,
+     "min_donors": {
+      "amount": 83,
+      "savings": 83
+     },
+     "savings": 0.14625794338877474,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.05815757391231548,
+     "min_donors": {
+      "amount": 2,
+      "savings": 21
+     },
+     "savings": 0.10788358052780479,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.11552923134288837,
+     "min_donors": {
+      "amount": 5,
+      "savings": 54
+     },
+     "savings": 0.12591834287684295,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 10,
+   "unweighted": {
+    "ate": 0.04271389381417473,
+    "lam_all": -0.025179333676923918,
+    "phi": {
+     "amount": -0.05749327565804541,
+     "savings": 0.032313941981121495
+    },
+    "savings_larger": 0.0
+   },
+   "weighted": {
+    "ate": 0.006977324061514745,
+    "lam_all": -0.018098193325064044,
+    "phi": {
+     "amount": -0.031218420501325145,
+     "savings": 0.013120227176261101
+    },
+    "savings_larger": 0.0
+   }
+  },
+  {
+   "acc_test": 0.658,
+   "acc_train": 0.826,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.06773897425429554,
+     "comp_both": 0.10215721429352198,
+     "comp_savings": 0.03383241256310421,
+     "gap": -0.03390656169119133,
+     "n_donors": 341,
+     "p_bad": 0.21106958754075128
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.11332135442793811,
+     "comp_both": 0.07676134126327994,
+     "comp_savings": 0.05907010349723929,
+     "gap": -0.054251250930698824,
+     "n_donors": 159,
+     "p_bad": 0.44796064553246584
+    }
+   },
+   "pair_gap": 0.23689105799171456,
+   "pw": {
+    "age_only_0.4": {
+     "amount": 0.08884723957796753,
+     "min_donors": {
+      "amount": 30,
+      "savings": 30
+     },
+     "savings": -0.0007636507827162853,
+     "savings_larger": 0.0
+    },
+    "age_only_0.8": {
+     "amount": 0.07470374346064074,
+     "min_donors": {
+      "amount": 84,
+      "savings": 84
+     },
+     "savings": 0.025241545565510615,
+     "savings_larger": 0.0
+    },
+    "matched_0.4": {
+     "amount": -0.00796115490249516,
+     "min_donors": {
+      "amount": 3,
+      "savings": 19
+     },
+     "savings": -0.03332177916836915,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": 0.03466671007220917,
+     "min_donors": {
+      "amount": 6,
+      "savings": 44
+     },
+     "savings": 0.023326286651040418,
+     "savings_larger": 0.0
+    }
+   },
+   "seed": 11,
+   "unweighted": {
+    "ate": 0.08110888886134443,
+    "lam_all": 0.02460785557957154,
+    "phi": {
+     "amount": 0.033549311338051335,
+     "savings": -0.008941455758479794
+    },
+    "savings_larger": 0.0
+   },
+   "weighted": {
+    "ate": 0.05528194072818865,
+    "lam_all": 0.020307240625800638,
+    "phi": {
+     "amount": 0.038957464099316386,
+     "savings": -0.018650223473515748
+    },
+    "savings_larger": 0.0
+   }
+  },
+  {
+   "acc_test": 0.658,
+   "acc_train": 0.796,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.023980163443313884,
+     "comp_both": 0.1427875179539586,
+     "comp_savings": 0.16283371662423762,
+     "gap": 0.13885355318092374,
+     "n_donors": 347,
+     "p_bad": 0.14201816043508675
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.059335499297074934,
+     "comp_both": -0.08315113971375598,
+     "comp_savings": -0.10697552385026843,
+     "gap": -0.047640024553193494,
+     "n_donors": 153,
+     "p_bad": 0.3787719092889558
+    }
+   },
+   "pair_gap": 0.23675374885386907,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.030957653437724914,
+     "min_donors": {
+      "amount": 32,
+      "savings": 32
+     },
+     "savings": -0.2899667914368011,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.11679718726235294,
+     "min_donors": {
+      "amount": 84,
+      "savings": 84
+     },
+     "savings": -0.28399741213349844,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": 0.0006265058077340457,
+     "min_donors": {
+      "amount": 2,
+      "savings": 23
+     },
+     "savings": -0.33914621881077556,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.16675060523784768,
+     "min_donors": {
+      "amount": 6,
+      "savings": 52
+     },
+     "savings": -0.3153727048155719,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 12,
+   "unweighted": {
+    "ate": 0.0776771657888422,
+    "lam_all": -0.07470272656211088,
+    "phi": {
+     "amount": -0.0004997083038163069,
+     "savings": -0.07420301825829458
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.0640399905249559,
+    "lam_all": -0.10161792495673239,
+    "phi": {
+     "amount": 0.003895691640209961,
+     "savings": -0.10551361659694235
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.64,
+   "acc_train": 0.822,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.11038097824619653,
+     "comp_both": -0.09944311307022569,
+     "comp_savings": -0.09764953425952894,
+     "gap": 0.01273144398666759,
+     "n_donors": 345,
+     "p_bad": 0.4201362383853765
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.05128947437306375,
+     "comp_both": 0.0569005290809701,
+     "comp_savings": 0.10967573104217487,
+     "gap": 0.16096520541523862,
+     "n_donors": 155,
+     "p_bad": 0.4681619612413687
+    }
+   },
+   "pair_gap": 0.048025722855992214,
+   "pw": {
+    "age_only_0.4": {
+     "amount": 0.07801599839015688,
+     "min_donors": {
+      "amount": 36,
+      "savings": 36
+     },
+     "savings": 0.14607640974304675,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": 0.06607320416862739,
+     "min_donors": {
+      "amount": 81,
+      "savings": 81
+     },
+     "savings": 0.18658781652295947,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": 0.2669224056930102,
+     "min_donors": {
+      "amount": 2,
+      "savings": 20
+     },
+     "savings": 0.1339116596352996,
+     "savings_larger": 0.0
+    },
+    "matched_0.8": {
+     "amount": 0.13929436764010347,
+     "min_donors": {
+      "amount": 4,
+      "savings": 46
+     },
+     "savings": 0.19598703443263354,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 13,
+   "unweighted": {
+    "ate": 0.06959975328467233,
+    "lam_all": 0.12490517954454541,
+    "phi": {
+     "amount": 0.056708126857808405,
+     "savings": 0.06819705268673701
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.03477016973540975,
+    "lam_all": 0.13009786209032423,
+    "phi": {
+     "amount": 0.06576215597870948,
+     "savings": 0.06433570611161475
+    },
+    "savings_larger": 0.0
+   }
+  },
+  {
+   "acc_test": 0.684,
+   "acc_train": 0.804,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.002586218058635237,
+     "comp_both": 0.10779194567489314,
+     "comp_savings": 0.09944916050201247,
+     "gap": 0.1020353785606477,
+     "n_donors": 359,
+     "p_bad": 0.09782712518525442
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.011380801759294346,
+     "comp_both": 0.08185568922406705,
+     "comp_savings": 0.06511013870294091,
+     "gap": 0.053729336943646566,
+     "n_donors": 141,
+     "p_bad": 0.34818361968070444
+    }
+   },
+   "pair_gap": 0.25035649449545,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.004429465098685553,
+     "min_donors": {
+      "amount": 33,
+      "savings": 33
+     },
+     "savings": -0.040440584832345444,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.011272107850982732,
+     "min_donors": {
+      "amount": 68,
+      "savings": 68
+     },
+     "savings": -0.04164069677567819,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.05306647401333958,
+     "min_donors": {
+      "amount": 1,
+      "savings": 19
+     },
+     "savings": -0.048535107206633454,
+     "savings_larger": 0.0
+    },
+    "matched_0.8": {
+     "amount": -0.05198327374111095,
+     "min_donors": {
+      "amount": 6,
+      "savings": 34
+     },
+     "savings": -0.03559982425499966,
+     "savings_larger": 0.0
+    }
+   },
+   "seed": 14,
+   "unweighted": {
+    "ate": 0.10011008874587288,
+    "lam_all": -0.10952461089586579,
+    "phi": {
+     "amount": -0.012354599453147624,
+     "savings": -0.09717001144271817
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.07374815506522411,
+    "lam_all": -0.09373428729948699,
+    "phi": {
+     "amount": -0.0055166524823480195,
+     "savings": -0.08821763481713897
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.664,
+   "acc_train": 0.82,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.10079439940298285,
+     "comp_both": 0.017701538825129592,
+     "comp_savings": -0.059745264459204694,
+     "gap": -0.16053966386218754,
+     "n_donors": 355,
+     "p_bad": 0.2686416266547486
+    },
+    "woman": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.031256633008820756,
+     "comp_both": 0.3034413891834038,
+     "comp_savings": 0.38916851404807107,
+     "gap": 0.3579118810392503,
+     "n_donors": 145,
+     "p_bad": 0.05839917382144798
+    }
+   },
+   "pair_gap": -0.21024245283330062,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.01077405877810192,
+     "min_donors": {
+      "amount": 29,
+      "savings": 29
+     },
+     "savings": 0.43144002967238926,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.05797099244003506,
+     "min_donors": {
+      "amount": 81,
+      "savings": 81
+     },
+     "savings": 0.43246418988933744,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.04884441518163024,
+     "min_donors": {
+      "amount": 4,
+      "savings": 19
+     },
+     "savings": 0.3233545869556512,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.08918912778845506,
+     "min_donors": {
+      "amount": 11,
+      "savings": 49
+     },
+     "savings": 0.3769183895840229,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 15,
+   "unweighted": {
+    "ate": 0.031413110390486776,
+    "lam_all": 0.06108554356954039,
+    "phi": {
+     "amount": -0.08327444611540863,
+     "savings": 0.14435998968494904
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": -0.00032626399149604524,
+    "lam_all": 0.015448323514564558,
+    "phi": {
+     "amount": -0.09953201820459456,
+     "savings": 0.11498034171915911
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.69,
+   "acc_train": 0.792,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.023418426656056757,
+     "comp_both": -0.026931825267059728,
+     "comp_savings": 0.005798547824751865,
+     "gap": 0.029216974480808622,
+     "n_donors": 350,
+     "p_bad": 0.20252594742142968
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.18302460802539045,
+     "comp_both": 0.43923190132984125,
+     "comp_savings": 0.3957871301482015,
+     "gap": 0.21276252212281105,
+     "n_donors": 150,
+     "p_bad": 0.7915556360163749
+    }
+   },
+   "pair_gap": 0.5890296885949452,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.09604219656330654,
+     "min_donors": {
+      "amount": 34,
+      "savings": 34
+     },
+     "savings": -0.4509959780994942,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.15082711723228476,
+     "min_donors": {
+      "amount": 77,
+      "savings": 77
+     },
+     "savings": -0.44909245473677883,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": 0.023909615176152754,
+     "min_donors": {
+      "amount": 2,
+      "savings": 25
+     },
+     "savings": -0.45780519529934216,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.13383222875262057,
+     "min_donors": {
+      "amount": 5,
+      "savings": 47
+     },
+     "savings": -0.45798067633606676,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 16,
+   "unweighted": {
+    "ate": 0.07020813709480228,
+    "lam_all": -0.17343258404916373,
+    "phi": {
+     "amount": -0.06968339317749332,
+     "savings": -0.10374919087167041
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.03651085566248366,
+    "lam_all": -0.1837508874139173,
+    "phi": {
+     "amount": -0.05689669159769843,
+     "savings": -0.12685419581621887
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.668,
+   "acc_train": 0.834,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.05673527167602943,
+     "comp_both": 0.11997600887193427,
+     "comp_savings": 0.026929896984042023,
+     "gap": -0.029805374691987407,
+     "n_donors": 341,
+     "p_bad": 0.10001324800704606
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.25113587659474923,
+     "comp_both": 0.4222327778801652,
+     "comp_savings": 0.3001607033315077,
+     "gap": 0.04902482673675845,
+     "n_donors": 159,
+     "p_bad": 0.9269644542912483
+    }
+   },
+   "pair_gap": 0.8269512062842023,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.24478413316521042,
+     "min_donors": {
+      "amount": 29,
+      "savings": 29
+     },
+     "savings": -0.3794850358083643,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.3218286307605738,
+     "min_donors": {
+      "amount": 94,
+      "savings": 94
+     },
+     "savings": -0.3480033719150196,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.010551463944126316,
+     "min_donors": {
+      "amount": 2,
+      "savings": 18
+     },
+     "savings": -0.4088339225243235,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.2062199889256766,
+     "min_donors": {
+      "amount": 7,
+      "savings": 54
+     },
+     "savings": -0.3564685414469898,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 17,
+   "unweighted": {
+    "ate": 0.0486734724658526,
+    "lam_all": -0.24959243185976013,
+    "phi": {
+     "amount": -0.1161998645818086,
+     "savings": -0.1333925672779515
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.021714510508342055,
+    "lam_all": -0.2057801140295568,
+    "phi": {
+     "amount": -0.07019101496642316,
+     "savings": -0.13558909906313363
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.674,
+   "acc_train": 0.82,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": -0.06743422120254616,
+     "comp_both": -0.008113878314449319,
+     "comp_savings": 0.005242764262044841,
+     "gap": 0.072676985464591,
+     "n_donors": 357,
+     "p_bad": 0.31100150876143495
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.2907960342964274,
+     "comp_both": 0.45058563046987515,
+     "comp_savings": 0.40090795140859226,
+     "gap": 0.11011191711216484,
+     "n_donors": 143,
+     "p_bad": 0.8228593628769906
+    }
+   },
+   "pair_gap": 0.5118578541155556,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.13048814234412487,
+     "min_donors": {
+      "amount": 27,
+      "savings": 27
+     },
+     "savings": -0.4668673969175159,
+     "savings_larger": 1.0
+    },
+    "age_only_0.8": {
+     "amount": -0.21074298917424628,
+     "min_donors": {
+      "amount": 65,
+      "savings": 65
+     },
+     "savings": -0.46794377364909656,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": 0.08082795407386478,
+     "min_donors": {
+      "amount": 2,
+      "savings": 20
+     },
+     "savings": -0.5065495225082646,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.10690835794094822,
+     "min_donors": {
+      "amount": 5,
+      "savings": 39
+     },
+     "savings": -0.4990031666626747,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 18,
+   "unweighted": {
+    "ate": 0.03349772100722437,
+    "lam_all": -0.27303207113003525,
+    "phi": {
+     "amount": -0.08986373871161851,
+     "savings": -0.18316833241841673
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": -0.003036569070238193,
+    "lam_all": -0.2465582943394861,
+    "phi": {
+     "amount": -0.07772330501419603,
+     "savings": -0.16883498932529006
+    },
+    "savings_larger": 1.0
+   }
+  },
+  {
+   "acc_test": 0.67,
+   "acc_train": 0.814,
+   "majority": 0.7,
+   "members": {
+    "man": {
+     "cls_bad": 0.0,
+     "comp_amount": 0.08246538656989466,
+     "comp_both": 0.10537128886078928,
+     "comp_savings": 0.025852458933945055,
+     "gap": -0.056612927635949606,
+     "n_donors": 355,
+     "p_bad": 0.16320505596227664
+    },
+    "woman": {
+     "cls_bad": 1.0,
+     "comp_amount": 0.2610428534130237,
+     "comp_both": 0.4298288270233067,
+     "comp_savings": 0.30367388251481575,
+     "gap": 0.04263102910179206,
+     "n_donors": 145,
+     "p_bad": 0.8325114034530204
+    }
+   },
+   "pair_gap": 0.6693063474907438,
+   "pw": {
+    "age_only_0.4": {
+     "amount": -0.36865997832403596,
+     "min_donors": {
+      "amount": 26,
+      "savings": 26
+     },
+     "savings": -0.32089743684741895,
+     "savings_larger": 0.0
+    },
+    "age_only_0.8": {
+     "amount": -0.360871440044333,
+     "min_donors": {
+      "amount": 76,
+      "savings": 76
+     },
+     "savings": -0.36708040877763115,
+     "savings_larger": 1.0
+    },
+    "matched_0.4": {
+     "amount": -0.015072805054422878,
+     "min_donors": {
+      "amount": 2,
+      "savings": 15
+     },
+     "savings": -0.3084615885611319,
+     "savings_larger": 1.0
+    },
+    "matched_0.8": {
+     "amount": -0.023668795921108265,
+     "min_donors": {
+      "amount": 4,
+      "savings": 46
+     },
+     "savings": -0.37958103179598324,
+     "savings_larger": 1.0
+    }
+   },
+   "seed": 19,
+   "unweighted": {
+    "ate": 0.07209646599959568,
+    "lam_all": 0.013480515122239078,
+    "phi": {
+     "amount": -0.08290508613983937,
+     "savings": 0.09638560126207844
+    },
+    "savings_larger": 1.0
+   },
+   "weighted": {
+    "ate": 0.043366125065211536,
+    "lam_all": 0.03602448524972085,
+    "phi": {
+     "amount": -0.06495264245811447,
+     "savings": 0.10097712770783532
+    },
+    "savings_larger": 1.0
+   }
+  }
+ ],
+ "summary": {
+  "acc_test": {
+   "max": 0.69,
+   "mean": 0.6700999999999999,
+   "min": 0.64,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.014817841308795
+  },
+  "acc_train": {
+   "max": 0.838,
+   "mean": 0.8154,
+   "min": 0.792,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.014438253284062301
+  },
+  "majority": {
+   "max": 0.7,
+   "mean": 0.6999999999999998,
+   "min": 0.7,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 1.1390647892519134e-16
+  },
+  "members.man.cls_bad": {
+   "max": 0.0,
+   "mean": 0.0,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 0,
+   "sd": 0.0
+  },
+  "members.man.comp_amount": {
+   "max": 0.19445285168962467,
+   "mean": 0.050719964381312856,
+   "min": -0.11038097824619653,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 5,
+   "pos": 15,
+   "sd": 0.07434011635056566
+  },
+  "members.man.comp_both": {
+   "max": 0.2981678495041631,
+   "mean": 0.08678893122631677,
+   "min": -0.09944311307022569,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 4,
+   "pos": 16,
+   "sd": 0.09628313733826034
+  },
+  "members.man.comp_savings": {
+   "max": 0.33709350891431145,
+   "mean": 0.06674474439599498,
+   "min": -0.10642947227951338,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 4,
+   "pos": 16,
+   "sd": 0.11021651133390371
+  },
+  "members.man.gap": {
+   "max": 0.2149310943212065,
+   "mean": 0.016024780014682133,
+   "min": -0.16053966386218754,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 8,
+   "pos": 12,
+   "sd": 0.09888616801567883
+  },
+  "members.man.n_donors": {
+   "max": 361.0,
+   "mean": 349.4,
+   "min": 333.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.762256861180733
+  },
+  "members.man.p_bad": {
+   "max": 0.4201362383853765,
+   "mean": 0.16470143500626505,
+   "min": 0.020100039774167976,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.10419349180351734
+  },
+  "members.woman.cls_bad": {
+   "max": 1.0,
+   "mean": 0.45,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 9,
+   "sd": 0.5104177855340405
+  },
+  "members.woman.comp_amount": {
+   "max": 0.2907960342964274,
+   "mean": 0.07768334183453651,
+   "min": -0.08710677773343678,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 5,
+   "pos": 15,
+   "sd": 0.1143707539850408
+  },
+  "members.woman.comp_both": {
+   "max": 0.45058563046987515,
+   "mean": 0.16525778130195562,
+   "min": -0.17153753349117407,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 4,
+   "pos": 16,
+   "sd": 0.18958034008974525
+  },
+  "members.woman.comp_savings": {
+   "max": 0.40090795140859226,
+   "mean": 0.15079569400591267,
+   "min": -0.21703135733275714,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 4,
+   "pos": 16,
+   "sd": 0.18640132150509917
+  },
+  "members.woman.gap": {
+   "max": 0.3579118810392503,
+   "mean": 0.07311235217137613,
+   "min": -0.22276865035874022,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 6,
+   "pos": 14,
+   "sd": 0.15733913628285842
+  },
+  "members.woman.n_donors": {
+   "max": 167.0,
+   "mean": 150.6,
+   "min": 139.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.762256861180734
+  },
+  "members.woman.p_bad": {
+   "max": 0.9269644542912483,
+   "mean": 0.5118392985849296,
+   "min": 0.05839917382144798,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.24065989927617618
+  },
+  "pair_gap": {
+   "max": 0.8269512062842023,
+   "mean": 0.34713786357866466,
+   "min": -0.21024245283330062,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.24886075787331943
+  },
+  "pw.age_only_0.4.amount": {
+   "max": 0.08884723957796753,
+   "mean": -0.11172627041148231,
+   "min": -0.38776980755696994,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 17,
+   "pos": 3,
+   "sd": 0.12934050001705744
+  },
+  "pw.age_only_0.4.min_donors.amount": {
+   "max": 42.0,
+   "mean": 31.7,
+   "min": 25.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 4.193980649002869
+  },
+  "pw.age_only_0.4.min_donors.savings": {
+   "max": 42.0,
+   "mean": 31.7,
+   "min": 25.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 4.193980649002869
+  },
+  "pw.age_only_0.4.savings": {
+   "max": 0.43144002967238926,
+   "mean": -0.1533411967597635,
+   "min": -0.5472641258887088,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 15,
+   "pos": 5,
+   "sd": 0.25238829314962297
+  },
+  "pw.age_only_0.4.savings_larger": {
+   "max": 1.0,
+   "mean": 0.7,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 14,
+   "sd": 0.4701623459816272
+  },
+  "pw.age_only_0.8.amount": {
+   "max": 0.07470374346064074,
+   "mean": -0.13964098317643314,
+   "min": -0.43767747230199067,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 17,
+   "pos": 3,
+   "sd": 0.13467797729619477
+  },
+  "pw.age_only_0.8.min_donors.amount": {
+   "max": 95.0,
+   "mean": 79.4,
+   "min": 65.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 8.02889518518811
+  },
+  "pw.age_only_0.8.min_donors.savings": {
+   "max": 95.0,
+   "mean": 79.4,
+   "min": 65.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 8.02889518518811
+  },
+  "pw.age_only_0.8.savings": {
+   "max": 0.43246418988933744,
+   "mean": -0.15156139720532474,
+   "min": -0.541926924983698,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 14,
+   "pos": 6,
+   "sd": 0.2565409106541186
+  },
+  "pw.age_only_0.8.savings_larger": {
+   "max": 1.0,
+   "mean": 0.75,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 15,
+   "sd": 0.4442616583193193
+  },
+  "pw.matched_0.4.amount": {
+   "max": 0.2669224056930102,
+   "mean": -0.014294710994027154,
+   "min": -0.27222346411798654,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 13,
+   "pos": 7,
+   "sd": 0.11097094486789484
+  },
+  "pw.matched_0.4.min_donors.amount": {
+   "max": 4.0,
+   "mean": 2.1,
+   "min": 1.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.7880689256524124
+  },
+  "pw.matched_0.4.min_donors.savings": {
+   "max": 28.0,
+   "mean": 20.05,
+   "min": 15.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 3.03445130737702
+  },
+  "pw.matched_0.4.savings": {
+   "max": 0.3233545869556512,
+   "mean": -0.176182741097174,
+   "min": -0.5812260312234105,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 15,
+   "pos": 5,
+   "sd": 0.24318358496383174
+  },
+  "pw.matched_0.4.savings_larger": {
+   "max": 1.0,
+   "mean": 0.8,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 16,
+   "sd": 0.41039134083406165
+  },
+  "pw.matched_0.8.amount": {
+   "max": 0.13929436764010347,
+   "mean": -0.12433782237136788,
+   "min": -0.4208480126487939,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 17,
+   "pos": 3,
+   "sd": 0.12897355940669966
+  },
+  "pw.matched_0.8.min_donors.amount": {
+   "max": 11.0,
+   "mean": 5.55,
+   "min": 3.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 1.669383750149485
+  },
+  "pw.matched_0.8.min_donors.savings": {
+   "max": 55.0,
+   "mean": 46.7,
+   "min": 34.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 5.302432411043465
+  },
+  "pw.matched_0.8.savings": {
+   "max": 0.3769183895840229,
+   "mean": -0.16325850298085134,
+   "min": -0.5452168915625402,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 14,
+   "pos": 6,
+   "sd": 0.25454786315165
+  },
+  "pw.matched_0.8.savings_larger": {
+   "max": 1.0,
+   "mean": 0.7,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 14,
+   "sd": 0.4701623459816272
+  },
+  "seed": {
+   "max": 19.0,
+   "mean": 9.5,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 5.916079783099616
+  },
+  "unweighted.ate": {
+   "max": 0.15553529869916893,
+   "mean": 0.07443895440320068,
+   "min": 0.016199464528186824,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.03560709705275646
+  },
+  "unweighted.lam_all": {
+   "max": 0.12490517954454541,
+   "mean": -0.10353352759645647,
+   "min": -0.27303207113003525,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 14,
+   "pos": 6,
+   "sd": 0.13204896107012568
+  },
+  "unweighted.phi.amount": {
+   "max": 0.056708126857808405,
+   "mean": -0.04627655469836361,
+   "min": -0.1692825404504545,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 16,
+   "pos": 4,
+   "sd": 0.05838584965638628
+  },
+  "unweighted.phi.savings": {
+   "max": 0.14435998968494904,
+   "mean": -0.05725697289809284,
+   "min": -0.23808458805069,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 14,
+   "pos": 6,
+   "sd": 0.10954318406011465
+  },
+  "unweighted.savings_larger": {
+   "max": 1.0,
+   "mean": 0.75,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 15,
+   "sd": 0.4442616583193193
+  },
+  "weighted.ate": {
+   "max": 0.1060585527273431,
+   "mean": 0.04100686887818319,
+   "min": -0.04673350033682375,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 3,
+   "pos": 17,
+   "sd": 0.037543538260258386
+  },
+  "weighted.lam_all": {
+   "max": 0.13009786209032423,
+   "mean": -0.08786461846089391,
+   "min": -0.25998109336859815,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 14,
+   "pos": 6,
+   "sd": 0.11352802250882549
+  },
+  "weighted.phi.amount": {
+   "max": 0.06576215597870948,
+   "mean": -0.03243176874342095,
+   "min": -0.11654534307370204,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 14,
+   "pos": 6,
+   "sd": 0.05144894973347006
+  },
+  "weighted.phi.savings": {
+   "max": 0.11498034171915911,
+   "mean": -0.055432849717472955,
+   "min": -0.22579755540732183,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 14,
+   "pos": 6,
+   "sd": 0.09739096277434658
+  },
+  "weighted.savings_larger": {
+   "max": 1.0,
+   "mean": 0.7,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 14,
+   "sd": 0.4701623459816272
+  }
+ }
+}

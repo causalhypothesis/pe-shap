@@ -1,0 +1,2943 @@
+{
+ "config": {
+  "label_rate": 0.47044334975369456,
+  "model": "StandardScaler + MLPClassifier(100, 50), alpha=0.001, max_iter=1000, random_state=seed",
+  "n": 5278,
+  "n_aa": 3175,
+  "n_c": 2103,
+  "propensity": "logistic on standardised age, clip 1e-3",
+  "pw_rules": [
+   "matched_0.2",
+   "matched_0.4",
+   "matched_0.8",
+   "matched_exact_0.4",
+   "age_only_0.2",
+   "age_only_0.4",
+   "age_only_0.8"
+  ],
+  "reference": {
+   "age": 31.0,
+   "felony": 1.0,
+   "juv_fel_count": 0.0,
+   "priors_count": 2.0
+  },
+  "splits": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "test_size": 0.3
+ },
+ "derived": {
+  "pe_priors_largest_count": 20,
+  "pw_priors_rule_max": 0.09156274215791896,
+  "pw_priors_rule_min": 0.05502083694387787,
+  "share_priors_pct": 93.78737988706924,
+  "window_years": {
+   "0.2": 2.33966652641673,
+   "0.4": 4.67933305283346,
+   "0.8": 9.35866610566692
+  }
+ },
+ "mediator_dependence": {
+  "0.2": [
+   {
+    "arm": 0,
+    "h": 0.2,
+    "n_window": 324,
+    "p_window": 0.002314955680387509,
+    "pair": [
+     "priors_count",
+     "juv_fel_count"
+    ],
+    "partial_rho_given_age": 0.128781998238776,
+    "rho_window": 0.16868938209472203
+   },
+   {
+    "arm": 0,
+    "h": 0.2,
+    "n_window": 324,
+    "p_window": 0.00024042963071265432,
+    "pair": [
+     "priors_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.18794684985914717,
+    "rho_window": 0.20267559024430562
+   },
+   {
+    "arm": 0,
+    "h": 0.2,
+    "n_window": 324,
+    "p_window": 0.26374786716555976,
+    "pair": [
+     "juv_fel_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.018115998470029253,
+    "rho_window": 0.06226798113283804
+   },
+   {
+    "arm": 1,
+    "h": 0.2,
+    "n_window": 607,
+    "p_window": 1.5209936569355292e-07,
+    "pair": [
+     "priors_count",
+     "juv_fel_count"
+    ],
+    "partial_rho_given_age": 0.22713382500753354,
+    "rho_window": 0.21111968706962417
+   },
+   {
+    "arm": 1,
+    "h": 0.2,
+    "n_window": 607,
+    "p_window": 1.2751323302570563e-06,
+    "pair": [
+     "priors_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.1619234433717398,
+    "rho_window": 0.19510509411641402
+   },
+   {
+    "arm": 1,
+    "h": 0.2,
+    "n_window": 607,
+    "p_window": 0.24071551159405458,
+    "pair": [
+     "juv_fel_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.05157349654772949,
+    "rho_window": 0.047689933798983834
+   }
+  ],
+  "0.4": [
+   {
+    "arm": 0,
+    "h": 0.4,
+    "n_window": 563,
+    "p_window": 0.00027615568911036045,
+    "pair": [
+     "priors_count",
+     "juv_fel_count"
+    ],
+    "partial_rho_given_age": 0.128781998238776,
+    "rho_window": 0.15270809713858127
+   },
+   {
+    "arm": 0,
+    "h": 0.4,
+    "n_window": 563,
+    "p_window": 5.63710954112569e-05,
+    "pair": [
+     "priors_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.18794684985914717,
+    "rho_window": 0.1688937383110206
+   },
+   {
+    "arm": 0,
+    "h": 0.4,
+    "n_window": 563,
+    "p_window": 0.4243171202138507,
+    "pair": [
+     "juv_fel_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.018115998470029253,
+    "rho_window": 0.033737289814250754
+   },
+   {
+    "arm": 1,
+    "h": 0.4,
+    "n_window": 1108,
+    "p_window": 4.438137983768786e-13,
+    "pair": [
+     "priors_count",
+     "juv_fel_count"
+    ],
+    "partial_rho_given_age": 0.22713382500753354,
+    "rho_window": 0.2152374208421107
+   },
+   {
+    "arm": 1,
+    "h": 0.4,
+    "n_window": 1108,
+    "p_window": 1.5788086341653444e-13,
+    "pair": [
+     "priors_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.1619234433717398,
+    "rho_window": 0.2192649539317244
+   },
+   {
+    "arm": 1,
+    "h": 0.4,
+    "n_window": 1108,
+    "p_window": 0.01216195025255046,
+    "pair": [
+     "juv_fel_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.05157349654772949,
+    "rho_window": 0.07530585729357119
+   }
+  ],
+  "0.8": [
+   {
+    "arm": 0,
+    "h": 0.8,
+    "n_window": 1194,
+    "p_window": 1.8745371712988176e-08,
+    "pair": [
+     "priors_count",
+     "juv_fel_count"
+    ],
+    "partial_rho_given_age": 0.128781998238776,
+    "rho_window": 0.16183080466722113
+   },
+   {
+    "arm": 0,
+    "h": 0.8,
+    "n_window": 1194,
+    "p_window": 5.7046358852021516e-08,
+    "pair": [
+     "priors_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.18794684985914717,
+    "rho_window": 0.15627847801353517
+   },
+   {
+    "arm": 0,
+    "h": 0.8,
+    "n_window": 1194,
+    "p_window": 0.4740310700066903,
+    "pair": [
+     "juv_fel_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.018115998470029253,
+    "rho_window": 0.020738639005773996
+   },
+   {
+    "arm": 1,
+    "h": 0.8,
+    "n_window": 2250,
+    "p_window": 6.586885968360001e-29,
+    "pair": [
+     "priors_count",
+     "juv_fel_count"
+    ],
+    "partial_rho_given_age": 0.22713382500753354,
+    "rho_window": 0.23212823475300146
+   },
+   {
+    "arm": 1,
+    "h": 0.8,
+    "n_window": 2250,
+    "p_window": 4.310961803668579e-14,
+    "pair": [
+     "priors_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.1619234433717398,
+    "rho_window": 0.15827785826493831
+   },
+   {
+    "arm": 1,
+    "h": 0.8,
+    "n_window": 2250,
+    "p_window": 0.03015508873263207,
+    "pair": [
+     "juv_fel_count",
+     "felony"
+    ],
+    "partial_rho_given_age": 0.05157349654772949,
+    "rho_window": 0.045707961729298925
+   }
+  ]
+ },
+ "meta": {
+  "date": "2026-10-26",
+  "deps": [
+   "experiments/exp5_compas.py",
+   "pe_shap/baselines/pwshap.py",
+   "pe_shap/data.py",
+   "pe_shap/estimands.py",
+   "pe_shap/game.py",
+   "pe_shap/io.py",
+   "pe_shap/models.py",
+   "pe_shap/sampler.py"
+  ],
+  "deps_digest": "c418cdbdc120844f3457042283d3dd0605e1e387e8a1e63d57d529c977323a2f",
+  "git": "no-git",
+  "mode": "full",
+  "nullable": [
+   "pw.matched_0.2.priors",
+   "pw.matched_0.2.juv",
+   "pw.matched_0.2.charge",
+   "pw.matched_0.2.priors_largest",
+   "pw.matched_0.4.priors",
+   "pw.matched_0.4.juv",
+   "pw.matched_0.4.charge",
+   "pw.matched_0.4.priors_largest",
+   "pw.matched_0.8.priors",
+   "pw.matched_0.8.juv",
+   "pw.matched_0.8.charge",
+   "pw.matched_0.8.priors_largest",
+   "pw.matched_exact_0.4.priors",
+   "pw.matched_exact_0.4.juv",
+   "pw.matched_exact_0.4.charge",
+   "pw.matched_exact_0.4.priors_largest",
+   "pw.age_only_0.2.priors",
+   "pw.age_only_0.2.juv",
+   "pw.age_only_0.2.charge",
+   "pw.age_only_0.2.priors_largest",
+   "pw.age_only_0.4.priors",
+   "pw.age_only_0.4.juv",
+   "pw.age_only_0.4.charge",
+   "pw.age_only_0.4.priors_largest",
+   "pw.age_only_0.8.priors",
+   "pw.age_only_0.8.juv",
+   "pw.age_only_0.8.charge",
+   "pw.age_only_0.8.priors_largest"
+  ],
+  "script": "experiments/exp5_compas.py",
+  "source_digest": "5e6f4465f2b65aca5510aaf91bdfd4850f7dd234931d9a94a0ba9f7fb96b56dc",
+  "versions": {
+   "numpy": "2.4.4",
+   "pandas": "3.0.2",
+   "platform": "macOS-26.3.1-arm64-arm-64bit",
+   "python": "3.12.10",
+   "scikit-learn": "1.8.0",
+   "scipy": "1.17.1"
+  }
+ },
+ "runs": [
+  {
+   "acc": 0.6881313131313131,
+   "age_sd_test": 11.583122382041813,
+   "ate": 0.09695589328004472,
+   "cde_all": -0.0074597170441735305,
+   "clipped": 0.0,
+   "lam_all": 0.10441561032421826,
+   "last_priors": 0.0967805207405974,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.046418767180189224,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.008727326920755812,
+    "juv": 0.0008412920249824818,
+    "priors": 0.09484699137847995
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.004458075710616183,
+     "juv": 0.004170894008751591,
+     "min_donors": {
+      "charge": 105,
+      "juv": 105,
+      "priors": 105
+     },
+     "priors": 0.08955377348178795,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.004311037528100359,
+     "juv": 0.006700785743828985,
+     "min_donors": {
+      "charge": 160,
+      "juv": 160,
+      "priors": 160
+     },
+     "priors": 0.08512592521620654,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.0034658411800163047,
+     "juv": 0.004709947211397725,
+     "min_donors": {
+      "charge": 358,
+      "juv": 358,
+      "priors": 358
+     },
+     "priors": 0.07189680578624352,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.006782388508023485,
+     "juv": 1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 45,
+      "juv": 26,
+      "priors": 66
+     },
+     "priors": 0.11917764265868247,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.005601630373642974,
+     "juv": -0.0006674584744826295,
+     "min_donors": {
+      "charge": 63,
+      "juv": 42,
+      "priors": 107
+     },
+     "priors": 0.10035949372120573,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.0047203966796945385,
+     "juv": -0.0005244316585220621,
+     "min_donors": {
+      "charge": 143,
+      "juv": 99,
+      "priors": 235
+     },
+     "priors": 0.07035083993461039,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.0006021597231761766,
+     "juv": -1.6653345369377348e-16,
+     "min_donors": {
+      "charge": 21,
+      "juv": 12,
+      "priors": 107
+     },
+     "priors": 0.10035949372120573,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 0
+  },
+  {
+   "acc": 0.6679292929292929,
+   "age_sd_test": 11.349309606792268,
+   "ate": 0.11576328631870131,
+   "cde_all": 0.013623294435041178,
+   "clipped": 0.0,
+   "lam_all": 0.10213999188366013,
+   "last_priors": 0.08731864971878817,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.019659654501464563,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.011489051232035427,
+    "juv": 0.0030483653696610027,
+    "priors": 0.08760257528196369
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": 0.001705403980033049,
+     "juv": 0.0019273266979480952,
+     "min_donors": {
+      "charge": 93,
+      "juv": 93,
+      "priors": 93
+     },
+     "priors": 0.06301690250142156,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": 0.003685974780412493,
+     "juv": 0.004066657728121814,
+     "min_donors": {
+      "charge": 182,
+      "juv": 182,
+      "priors": 182
+     },
+     "priors": 0.08889834276496972,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": 0.003634368693606893,
+     "juv": 0.004006012559699512,
+     "min_donors": {
+      "charge": 363,
+      "juv": 363,
+      "priors": 363
+     },
+     "priors": 0.06671271805156953,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.004731035865351396,
+     "juv": -0.0,
+     "min_donors": {
+      "charge": 37,
+      "juv": 24,
+      "priors": 60
+     },
+     "priors": 0.06038808198126677,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": 8.259211528199861e-05,
+     "juv": 0.00020626555972858007,
+     "min_donors": {
+      "charge": 73,
+      "juv": 47,
+      "priors": 113
+     },
+     "priors": 0.08617568059838188,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": 0.0009106698455708107,
+     "juv": 0.0022152273781873566,
+     "min_donors": {
+      "charge": 146,
+      "juv": 94,
+      "priors": 223
+     },
+     "priors": 0.05510660510542009,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.006149695868492289,
+     "juv": -5.551115123125783e-17,
+     "min_donors": {
+      "charge": 29,
+      "juv": 21,
+      "priors": 113
+     },
+     "priors": 0.08617568059838188,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 1
+  },
+  {
+   "acc": 0.6704545454545454,
+   "age_sd_test": 11.843563763334952,
+   "ate": 0.08726615860763942,
+   "cde_all": 0.015654334666283687,
+   "clipped": 0.0,
+   "lam_all": 0.07161182394135573,
+   "last_priors": 0.061995048125863095,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.05619746944290738,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.00440604370859234,
+    "juv": 0.00031783887665061866,
+    "priors": 0.06688794135611277
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.0135183423969919,
+     "juv": 0.005125338677820834,
+     "min_donors": {
+      "charge": 111,
+      "juv": 111,
+      "priors": 111
+     },
+     "priors": 0.0756216323824932,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.011499173909799154,
+     "juv": 0.002170702903388666,
+     "min_donors": {
+      "charge": 174,
+      "juv": 174,
+      "priors": 174
+     },
+     "priors": 0.104696685303797,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.008781755249693157,
+     "juv": 0.002133633345153152,
+     "min_donors": {
+      "charge": 357,
+      "juv": 357,
+      "priors": 357
+     },
+     "priors": 0.06503008074515038,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.021319060476069962,
+     "juv": -1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 43,
+      "juv": 25,
+      "priors": 71
+     },
+     "priors": 0.058882647074125716,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.017983513008989427,
+     "juv": -0.0006495581032007758,
+     "min_donors": {
+      "charge": 68,
+      "juv": 43,
+      "priors": 106
+     },
+     "priors": 0.0953143595794333,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.01103127425839534,
+     "juv": -0.000748109197531821,
+     "min_donors": {
+      "charge": 143,
+      "juv": 91,
+      "priors": 216
+     },
+     "priors": 0.05369786019842948,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.020710913465096292,
+     "juv": 5.551115123125783e-17,
+     "min_donors": {
+      "charge": 20,
+      "juv": 15,
+      "priors": 106
+     },
+     "priors": 0.0953143595794333,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 2
+  },
+  {
+   "acc": 0.6672979797979798,
+   "age_sd_test": 11.650448821222248,
+   "ate": 0.09799295978681832,
+   "cde_all": 0.002565757845777006,
+   "clipped": 0.0,
+   "lam_all": 0.09542720194104132,
+   "last_priors": 0.08824459203169932,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.1068163499361437,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.012203699401453058,
+    "juv": -0.001595742631482757,
+    "priors": 0.084819245171071
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": 0.03593371933556305,
+     "juv": 0.005348534958548257,
+     "min_donors": {
+      "charge": 104,
+      "juv": 104,
+      "priors": 104
+     },
+     "priors": 0.14749309042240666,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": 0.0364752084866124,
+     "juv": 0.0034015084911107607,
+     "min_donors": {
+      "charge": 172,
+      "juv": 172,
+      "priors": 172
+     },
+     "priors": 0.13622460335254977,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": 0.03445733704493675,
+     "juv": 0.0019303611353489458,
+     "min_donors": {
+      "charge": 364,
+      "juv": 364,
+      "priors": 364
+     },
+     "priors": 0.09511903040574338,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": 0.03868473938688499,
+     "juv": -2.220446049250313e-16,
+     "min_donors": {
+      "charge": 51,
+      "juv": 26,
+      "priors": 59
+     },
+     "priors": 0.16088264449447248,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": 0.04130094225073305,
+     "juv": -0.00025289962540331334,
+     "min_donors": {
+      "charge": 72,
+      "juv": 37,
+      "priors": 99
+     },
+     "priors": 0.14501919162763344,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": 0.03452566323942219,
+     "juv": -0.00021222346187682595,
+     "min_donors": {
+      "charge": 153,
+      "juv": 89,
+      "priors": 214
+     },
+     "priors": 0.09385603778624313,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": 0.04132861307623087,
+     "juv": -5.551115123125783e-17,
+     "min_donors": {
+      "charge": 22,
+      "juv": 11,
+      "priors": 99
+     },
+     "priors": 0.14501919162763344,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 3
+  },
+  {
+   "acc": 0.6603535353535354,
+   "age_sd_test": 11.519958230514685,
+   "ate": 0.09653428258918728,
+   "cde_all": 0.0290243850845866,
+   "clipped": 0.0,
+   "lam_all": 0.06750989750460068,
+   "last_priors": 0.06171877842477286,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.03112899375524042,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.002716107240417061,
+    "juv": 0.002025161332296817,
+    "priors": 0.0627686289318868
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.004180161291584272,
+     "juv": 0.009306223858458251,
+     "min_donors": {
+      "charge": 95,
+      "juv": 95,
+      "priors": 95
+     },
+     "priors": 0.08874372298519839,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.00953217784167576,
+     "juv": 0.011459817030288977,
+     "min_donors": {
+      "charge": 169,
+      "juv": 169,
+      "priors": 169
+     },
+     "priors": 0.08076153912984835,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.01290349118162576,
+     "juv": 0.008003912510505917,
+     "min_donors": {
+      "charge": 353,
+      "juv": 353,
+      "priors": 353
+     },
+     "priors": 0.05265732376539356,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.012109017004640676,
+     "juv": 0.0037669985314532917,
+     "min_donors": {
+      "charge": 37,
+      "juv": 20,
+      "priors": 51
+     },
+     "priors": 0.07707661636573065,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.009248362230042162,
+     "juv": 0.003641431913738391,
+     "min_donors": {
+      "charge": 73,
+      "juv": 44,
+      "priors": 103
+     },
+     "priors": 0.07253873400553468,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.019211558827816944,
+     "juv": 0.0066687608451654334,
+     "min_donors": {
+      "charge": 143,
+      "juv": 97,
+      "priors": 225
+     },
+     "priors": 0.0517855122505359,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.01348318392941833,
+     "juv": 0.006827684838259185,
+     "min_donors": {
+      "charge": 22,
+      "juv": 16,
+      "priors": 103
+     },
+     "priors": 0.07253873400553468,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 4
+  },
+  {
+   "acc": 0.67739898989899,
+   "age_sd_test": 11.860557754379169,
+   "ate": 0.07660196144397818,
+   "cde_all": 0.038551728441460154,
+   "clipped": 0.0,
+   "lam_all": 0.03805023300251803,
+   "last_priors": 0.03802117916432213,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": 0.049346699113664905,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": -0.008831237787756277,
+    "juv": 0.0031536691638003505,
+    "priors": 0.04372780162647395
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.04571840293462698,
+     "juv": 0.01940879691459474,
+     "min_donors": {
+      "charge": 92,
+      "juv": 92,
+      "priors": 92
+     },
+     "priors": -0.018519451229120465,
+     "priors_largest": 0.0
+    },
+    "age_only_0.4": {
+     "charge": -0.042532459521946675,
+     "juv": 0.010904907933859675,
+     "min_donors": {
+      "charge": 168,
+      "juv": 168,
+      "priors": 168
+     },
+     "priors": -0.0030401551291675544,
+     "priors_largest": 0.0
+    },
+    "age_only_0.8": {
+     "charge": -0.0435674365289247,
+     "juv": 0.005280384402714389,
+     "min_donors": {
+      "charge": 358,
+      "juv": 358,
+      "priors": 358
+     },
+     "priors": -0.022685727022992097,
+     "priors_largest": 0.0
+    },
+    "matched_0.2": {
+     "charge": -0.050502753310315396,
+     "juv": -0.000634083908246097,
+     "min_donors": {
+      "charge": 47,
+      "juv": 35,
+      "priors": 62
+     },
+     "priors": -0.04149448590582705,
+     "priors_largest": 0.0
+    },
+    "matched_0.4": {
+     "charge": -0.04326072533537456,
+     "juv": -0.00045601924908089675,
+     "min_donors": {
+      "charge": 81,
+      "juv": 55,
+      "priors": 115
+     },
+     "priors": -0.011055262058780546,
+     "priors_largest": 0.0
+    },
+    "matched_0.8": {
+     "charge": -0.0479201656985776,
+     "juv": 0.000325181743261016,
+     "min_donors": {
+      "charge": 154,
+      "juv": 108,
+      "priors": 230
+     },
+     "priors": -0.036245014451681046,
+     "priors_largest": 0.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.05245815795045067,
+     "juv": -0.0005284032568717567,
+     "min_donors": {
+      "charge": 25,
+      "juv": 17,
+      "priors": 115
+     },
+     "priors": -0.011055262058780546,
+     "priors_largest": 0.0
+    }
+   },
+   "seed": 5
+  },
+  {
+   "acc": 0.663510101010101,
+   "age_sd_test": 11.750189780183957,
+   "ate": 0.10112550352053351,
+   "cde_all": 0.01843193266725568,
+   "clipped": 0.0,
+   "lam_all": 0.08269357085327783,
+   "last_priors": 0.07072864886106339,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.0570310611245447,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.005695202535156614,
+    "juv": 0.0008177379788934143,
+    "priors": 0.0761806303392278
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.013703360232024675,
+     "juv": 0.0036381951431041504,
+     "min_donors": {
+      "charge": 98,
+      "juv": 98,
+      "priors": 98
+     },
+     "priors": 0.04307346866639028,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.014640462268436127,
+     "juv": 0.002904927310365568,
+     "min_donors": {
+      "charge": 171,
+      "juv": 171,
+      "priors": 171
+     },
+     "priors": 0.08076186061945695,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.014808343791443856,
+     "juv": 0.0017168483141490332,
+     "min_donors": {
+      "charge": 338,
+      "juv": 338,
+      "priors": 338
+     },
+     "priors": 0.05354555572672903,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.01732467217340805,
+     "juv": -0.0,
+     "min_donors": {
+      "charge": 45,
+      "juv": 24,
+      "priors": 55
+     },
+     "priors": 0.008394109918501924,
+     "priors_largest": 0.0
+    },
+    "matched_0.4": {
+     "charge": -0.021333408159610212,
+     "juv": -0.0009571974254740101,
+     "min_donors": {
+      "charge": 70,
+      "juv": 38,
+      "priors": 95
+     },
+     "priors": 0.08325325353496771,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.017875057680696527,
+     "juv": -0.0017632584153469688,
+     "min_donors": {
+      "charge": 144,
+      "juv": 85,
+      "priors": 199
+     },
+     "priors": 0.05691868788831156,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.012294746010253432,
+     "juv": -0.0,
+     "min_donors": {
+      "charge": 22,
+      "juv": 14,
+      "priors": 95
+     },
+     "priors": 0.08325325353496771,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 6
+  },
+  {
+   "acc": 0.6862373737373737,
+   "age_sd_test": 11.809274484440124,
+   "ate": 0.08593471098791583,
+   "cde_all": 0.023711085677429522,
+   "clipped": 0.0,
+   "lam_all": 0.06222362531048631,
+   "last_priors": 0.05685980046378036,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": 0.007036814874106012,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": -7.622538182155058e-05,
+    "juv": -0.0016924874029568178,
+    "priors": 0.06399233809526467
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.0142191823854238,
+     "juv": -0.000441560585289269,
+     "min_donors": {
+      "charge": 105,
+      "juv": 105,
+      "priors": 105
+     },
+     "priors": 0.09587660687497368,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.016315105146201825,
+     "juv": -0.0007585627469794964,
+     "min_donors": {
+      "charge": 185,
+      "juv": 185,
+      "priors": 185
+     },
+     "priors": 0.09010440993686913,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.01492683696493452,
+     "juv": -0.001456416348989964,
+     "min_donors": {
+      "charge": 371,
+      "juv": 371,
+      "priors": 371
+     },
+     "priors": 0.04780323813295878,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.0355771511225928,
+     "juv": -0.004508183017103207,
+     "min_donors": {
+      "charge": 37,
+      "juv": 19,
+      "priors": 68
+     },
+     "priors": 0.09231543967685885,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.02345701080603657,
+     "juv": -0.0017480709658156401,
+     "min_donors": {
+      "charge": 84,
+      "juv": 49,
+      "priors": 118
+     },
+     "priors": 0.08903440855324679,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.018652835767980158,
+     "juv": -0.0009994564500476755,
+     "min_donors": {
+      "charge": 158,
+      "juv": 103,
+      "priors": 232
+     },
+     "priors": 0.042364105630846915,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.027852690945554592,
+     "juv": -5.551115123125783e-17,
+     "min_donors": {
+      "charge": 20,
+      "juv": 10,
+      "priors": 118
+     },
+     "priors": 0.08903440855324679,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 7
+  },
+  {
+   "acc": 0.6710858585858586,
+   "age_sd_test": 11.721726487672765,
+   "ate": 0.11639841880071444,
+   "cde_all": 0.008188340446348641,
+   "clipped": 0.0,
+   "lam_all": 0.1082100783543658,
+   "last_priors": 0.09776429441679657,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.028104515670293317,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.008893090325663894,
+    "juv": -0.0006748261500265732,
+    "priors": 0.09999181417872846
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.01550380794398748,
+     "juv": 0.0035953899163975733,
+     "min_donors": {
+      "charge": 94,
+      "juv": 94,
+      "priors": 94
+     },
+     "priors": 0.08366421632385845,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.01439792908416987,
+     "juv": 0.003853361998848892,
+     "min_donors": {
+      "charge": 166,
+      "juv": 166,
+      "priors": 166
+     },
+     "priors": 0.11110840259820026,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.013533540712831693,
+     "juv": 0.0022484007797968775,
+     "min_donors": {
+      "charge": 361,
+      "juv": 361,
+      "priors": 361
+     },
+     "priors": 0.07336684744788624,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.017025785919660974,
+     "juv": 1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 41,
+      "juv": 25,
+      "priors": 55
+     },
+     "priors": 0.08010987741748832,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.016044475921742574,
+     "juv": -0.0,
+     "min_donors": {
+      "charge": 72,
+      "juv": 39,
+      "priors": 93
+     },
+     "priors": 0.11494476911283369,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.01227929073101014,
+     "juv": -0.00037814400899410794,
+     "min_donors": {
+      "charge": 150,
+      "juv": 90,
+      "priors": 215
+     },
+     "priors": 0.07599492485798831,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.016365213214261598,
+     "juv": 1.6653345369377348e-16,
+     "min_donors": {
+      "charge": 22,
+      "juv": 13,
+      "priors": 93
+     },
+     "priors": 0.11494476911283369,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 8
+  },
+  {
+   "acc": 0.6704545454545454,
+   "age_sd_test": 11.50823820933831,
+   "ate": 0.0987361056104743,
+   "cde_all": 0.026084434934499523,
+   "clipped": 0.0,
+   "lam_all": 0.07265167067597478,
+   "last_priors": 0.06817556763462923,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.034300448270133344,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": -0.0010127523835862886,
+    "juv": 0.0014233402487947207,
+    "priors": 0.07224108281076633
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": 0.007722401425665049,
+     "juv": 0.01679207632475005,
+     "min_donors": {
+      "charge": 101,
+      "juv": 101,
+      "priors": 101
+     },
+     "priors": 0.0695853894704972,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": 0.0072958155921926116,
+     "juv": 0.00917869059939802,
+     "min_donors": {
+      "charge": 184,
+      "juv": 184,
+      "priors": 184
+     },
+     "priors": 0.09551548037236701,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": 0.002503492801421925,
+     "juv": 0.00549042940482225,
+     "min_donors": {
+      "charge": 377,
+      "juv": 377,
+      "priors": 377
+     },
+     "priors": 0.05477322085431563,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.01099125013907587,
+     "juv": -1.6653345369377348e-16,
+     "min_donors": {
+      "charge": 40,
+      "juv": 24,
+      "priors": 54
+     },
+     "priors": 0.0449531548183551,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.0011506459317755513,
+     "juv": -0.0004709521482952894,
+     "min_donors": {
+      "charge": 73,
+      "juv": 41,
+      "priors": 101
+     },
+     "priors": 0.08811852923161012,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.000577382655645553,
+     "juv": -0.0014875365826365061,
+     "min_donors": {
+      "charge": 156,
+      "juv": 95,
+      "priors": 224
+     },
+     "priors": 0.05024427783552443,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": 0.0028559622569823695,
+     "juv": -5.551115123125783e-17,
+     "min_donors": {
+      "charge": 23,
+      "juv": 19,
+      "priors": 101
+     },
+     "priors": 0.08811852923161012,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 9
+  },
+  {
+   "acc": 0.6679292929292929,
+   "age_sd_test": 11.560417580716122,
+   "ate": 0.09106358654331076,
+   "cde_all": -0.0036144711358063186,
+   "clipped": 0.0,
+   "lam_all": 0.09467805767911708,
+   "last_priors": 0.07656835819424701,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.06757752420360785,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.00961454393868205,
+    "juv": 0.0041723457973993905,
+    "priors": 0.08089116794303564
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.019342333253111632,
+     "juv": 0.007722821301414273,
+     "min_donors": {
+      "charge": 105,
+      "juv": 105,
+      "priors": 105
+     },
+     "priors": 0.08824921820458942,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.02043819899064281,
+     "juv": 0.008936653159690777,
+     "min_donors": {
+      "charge": 179,
+      "juv": 179,
+      "priors": 179
+     },
+     "priors": 0.08480517175036073,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.017732147676717602,
+     "juv": 0.006501471963887895,
+     "min_donors": {
+      "charge": 373,
+      "juv": 373,
+      "priors": 373
+     },
+     "priors": 0.06415510302700295,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.02587743355655553,
+     "juv": -0.001286953935998869,
+     "min_donors": {
+      "charge": 42,
+      "juv": 26,
+      "priors": 59
+     },
+     "priors": 0.07589273823584708,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.027231461221844333,
+     "juv": -0.0013384320934390903,
+     "min_donors": {
+      "charge": 78,
+      "juv": 45,
+      "priors": 104
+     },
+     "priors": 0.07717728427904769,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.019820842047190868,
+     "juv": 0.00044740411563931604,
+     "min_donors": {
+      "charge": 149,
+      "juv": 94,
+      "priors": 218
+     },
+     "priors": 0.05347278721317922,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.01257020289362859,
+     "juv": -0.0015933715398080417,
+     "min_donors": {
+      "charge": 23,
+      "juv": 15,
+      "priors": 104
+     },
+     "priors": 0.07717728427904769,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 10
+  },
+  {
+   "acc": 0.6698232323232324,
+   "age_sd_test": 11.62010695493749,
+   "ate": 0.08327311697962786,
+   "cde_all": -0.0020239787374853324,
+   "clipped": 0.0,
+   "lam_all": 0.08529709571711319,
+   "last_priors": 0.08839039888671563,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.0665341414475299,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.0007723213797254564,
+    "juv": -0.003135916648435553,
+    "priors": 0.08766069098582328
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.008051896226232036,
+     "juv": 0.0055891505174527345,
+     "min_donors": {
+      "charge": 95,
+      "juv": 95,
+      "priors": 95
+     },
+     "priors": 0.09351835421745192,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.005087214915576732,
+     "juv": 0.003793996666818289,
+     "min_donors": {
+      "charge": 174,
+      "juv": 174,
+      "priors": 174
+     },
+     "priors": 0.12332675919238056,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.006107574009478034,
+     "juv": 0.0006495327649733151,
+     "min_donors": {
+      "charge": 360,
+      "juv": 360,
+      "priors": 360
+     },
+     "priors": 0.09032712732749942,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.010294502680828155,
+     "juv": -0.003892309926955162,
+     "min_donors": {
+      "charge": 34,
+      "juv": 23,
+      "priors": 58
+     },
+     "priors": 0.06958061674083338,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.009610559038850885,
+     "juv": -0.0018935561806807666,
+     "min_donors": {
+      "charge": 60,
+      "juv": 38,
+      "priors": 104
+     },
+     "priors": 0.09923130882820574,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.01033485762019648,
+     "juv": -0.0011738676255197422,
+     "min_donors": {
+      "charge": 132,
+      "juv": 86,
+      "priors": 218
+     },
+     "priors": 0.07513724829886526,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.006506652949014702,
+     "juv": -0.0025948732846368117,
+     "min_donors": {
+      "charge": 18,
+      "juv": 10,
+      "priors": 104
+     },
+     "priors": 0.09923130882820574,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 11
+  },
+  {
+   "acc": 0.6736111111111112,
+   "age_sd_test": 11.858251411712738,
+   "ate": 0.07432772561174245,
+   "cde_all": -0.0013692204917142847,
+   "clipped": 0.0,
+   "lam_all": 0.07569694610345673,
+   "last_priors": 0.07368720065126172,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.06429083636789795,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": -0.00031940718788213873,
+    "juv": -0.0035068278629582965,
+    "priors": 0.07952318115429716
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.006360839962393061,
+     "juv": 0.0013608215497320497,
+     "min_donors": {
+      "charge": 88,
+      "juv": 88,
+      "priors": 88
+     },
+     "priors": 0.09841320665036096,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.008028449773610002,
+     "juv": 0.001938087595559912,
+     "min_donors": {
+      "charge": 163,
+      "juv": 163,
+      "priors": 163
+     },
+     "priors": 0.1064355404128956,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.004613198063295909,
+     "juv": -0.0022963332030880856,
+     "min_donors": {
+      "charge": 334,
+      "juv": 334,
+      "priors": 334
+     },
+     "priors": 0.07096070922411818,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.015194489419191215,
+     "juv": -0.0006238916641480574,
+     "min_donors": {
+      "charge": 40,
+      "juv": 19,
+      "priors": 47
+     },
+     "priors": 0.10758155560729327,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.014338327898829772,
+     "juv": -0.0009188222690180714,
+     "min_donors": {
+      "charge": 71,
+      "juv": 34,
+      "priors": 90
+     },
+     "priors": 0.12094604811995197,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.005737547301926105,
+     "juv": -0.004127452813647403,
+     "min_donors": {
+      "charge": 141,
+      "juv": 74,
+      "priors": 185
+     },
+     "priors": 0.06384317455169192,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.02052628447046384,
+     "juv": -1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 23,
+      "juv": 13,
+      "priors": 90
+     },
+     "priors": 0.12094604811995197,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 12
+  },
+  {
+   "acc": 0.6609848484848485,
+   "age_sd_test": 12.005034676370673,
+   "ate": 0.12298023898156946,
+   "cde_all": 0.03167270256468774,
+   "clipped": 0.0,
+   "lam_all": 0.09130753641688172,
+   "last_priors": 0.07654124147490265,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.033855311574554126,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.016053317178560622,
+    "juv": -0.0010913376249335471,
+    "priors": 0.07634555686325464
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": 0.00510564225252802,
+     "juv": 0.007679718904374078,
+     "min_donors": {
+      "charge": 104,
+      "juv": 104,
+      "priors": 104
+     },
+     "priors": 0.1386452632403506,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": 0.0037886566291724932,
+     "juv": 0.006885499285697649,
+     "min_donors": {
+      "charge": 169,
+      "juv": 169,
+      "priors": 169
+     },
+     "priors": 0.11536470392875975,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -8.9718617094392e-05,
+     "juv": 0.004587694710402768,
+     "min_donors": {
+      "charge": 371,
+      "juv": 371,
+      "priors": 371
+     },
+     "priors": 0.06710140791590424,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.007014534381542814,
+     "juv": 0.001780644287477151,
+     "min_donors": {
+      "charge": 39,
+      "juv": 26,
+      "priors": 59
+     },
+     "priors": 0.12002061960217608,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.0026986619798103906,
+     "juv": 0.0008573472495259638,
+     "min_donors": {
+      "charge": 68,
+      "juv": 41,
+      "priors": 98
+     },
+     "priors": 0.09857686087499601,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.00416404013004118,
+     "juv": 0.000752978769609669,
+     "min_donors": {
+      "charge": 145,
+      "juv": 98,
+      "priors": 228
+     },
+     "priors": 0.05813810241631795,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.003434083759574713,
+     "juv": 0.0014467734835749702,
+     "min_donors": {
+      "charge": 23,
+      "juv": 15,
+      "priors": 98
+     },
+     "priors": 0.09857686087499601,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 13
+  },
+  {
+   "acc": 0.678030303030303,
+   "age_sd_test": 11.79831971086976,
+   "ate": 0.09594785832230168,
+   "cde_all": 0.020912649904022418,
+   "clipped": 0.0,
+   "lam_all": 0.07503520841827926,
+   "last_priors": 0.06407214642468151,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.02745368786130742,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.004039136962419226,
+    "juv": -0.0011436194018411006,
+    "priors": 0.07213969085770114
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.021943516312333766,
+     "juv": 0.005408478139254269,
+     "min_donors": {
+      "charge": 90,
+      "juv": 90,
+      "priors": 90
+     },
+     "priors": 0.044817682426546046,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.02508635427609407,
+     "juv": 0.0036886672128665365,
+     "min_donors": {
+      "charge": 158,
+      "juv": 158,
+      "priors": 158
+     },
+     "priors": 0.06345717031038095,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.02439851197357129,
+     "juv": 0.0012417546005479285,
+     "min_donors": {
+      "charge": 344,
+      "juv": 344,
+      "priors": 344
+     },
+     "priors": 0.029455833816015964,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.023589775439304406,
+     "juv": -1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 30,
+      "juv": 17,
+      "priors": 51
+     },
+     "priors": 0.04299013293571652,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.030308524203940035,
+     "juv": 1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 61,
+      "juv": 35,
+      "priors": 90
+     },
+     "priors": 0.07272005540280291,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.027324475983364238,
+     "juv": -0.0011911247999893404,
+     "min_donors": {
+      "charge": 143,
+      "juv": 89,
+      "priors": 199
+     },
+     "priors": 0.033967779162894896,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.02953170392024773,
+     "juv": -1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 24,
+      "juv": 13,
+      "priors": 90
+     },
+     "priors": 0.07272005540280291,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 14
+  },
+  {
+   "acc": 0.6698232323232324,
+   "age_sd_test": 11.708921529197942,
+   "ate": 0.07410242184669985,
+   "cde_all": -0.011858606786757986,
+   "clipped": 0.0,
+   "lam_all": 0.08596102863345784,
+   "last_priors": 0.07749491154900667,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.04743453388385338,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.008452641550461937,
+    "juv": 0.002384228177564285,
+    "priors": 0.07512415890543162
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.017971960302698875,
+     "juv": 0.013326018184217914,
+     "min_donors": {
+      "charge": 92,
+      "juv": 92,
+      "priors": 92
+     },
+     "priors": 0.07448088870261199,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.01752801539430504,
+     "juv": 0.009484597503754244,
+     "min_donors": {
+      "charge": 174,
+      "juv": 174,
+      "priors": 174
+     },
+     "priors": 0.0825180796054728,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.019271871797635898,
+     "juv": 0.0074062599865753476,
+     "min_donors": {
+      "charge": 336,
+      "juv": 336,
+      "priors": 336
+     },
+     "priors": 0.05387857276957819,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.029430290163151906,
+     "juv": -5.551115123125783e-17,
+     "min_donors": {
+      "charge": 32,
+      "juv": 22,
+      "priors": 53
+     },
+     "priors": 0.07418785119983368,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.02717795703933612,
+     "juv": -1.6653345369377348e-16,
+     "min_donors": {
+      "charge": 62,
+      "juv": 40,
+      "priors": 101
+     },
+     "priors": 0.08929129813327058,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.022843044989153405,
+     "juv": 0.001402300764948572,
+     "min_donors": {
+      "charge": 129,
+      "juv": 84,
+      "priors": 203
+     },
+     "priors": 0.049514733063856786,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.026534414857015798,
+     "juv": 1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 24,
+      "juv": 15,
+      "priors": 101
+     },
+     "priors": 0.08929129813327058,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 15
+  },
+  {
+   "acc": 0.6767676767676768,
+   "age_sd_test": 11.538195560188798,
+   "ate": 0.09605490978337078,
+   "cde_all": 0.03187435691514279,
+   "clipped": 0.0,
+   "lam_all": 0.06418055286822799,
+   "last_priors": 0.06179137184298916,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.012689591948956469,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": -0.003594796464253036,
+    "juv": -5.8358276745801296e-05,
+    "priors": 0.06783370760922683
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.042341206040020285,
+     "juv": 0.0035785759266876993,
+     "min_donors": {
+      "charge": 83,
+      "juv": 83,
+      "priors": 83
+     },
+     "priors": 0.06992920551466486,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.036894513184676514,
+     "juv": 0.0060284132630396,
+     "min_donors": {
+      "charge": 159,
+      "juv": 159,
+      "priors": 159
+     },
+     "priors": 0.0851157158429584,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.034501806540948865,
+     "juv": 0.002542328844869657,
+     "min_donors": {
+      "charge": 340,
+      "juv": 340,
+      "priors": 340
+     },
+     "priors": 0.04952851766256511,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.06946944549632722,
+     "juv": 1.6653345369377348e-16,
+     "min_donors": {
+      "charge": 35,
+      "juv": 23,
+      "priors": 51
+     },
+     "priors": 0.06561218289391713,
+     "priors_largest": 0.0
+    },
+    "matched_0.4": {
+     "charge": -0.05070157090295735,
+     "juv": 0.000257946631010586,
+     "min_donors": {
+      "charge": 61,
+      "juv": 41,
+      "priors": 100
+     },
+     "priors": 0.09207684170644848,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.03768777674904794,
+     "juv": 0.0011393859143539742,
+     "min_donors": {
+      "charge": 138,
+      "juv": 91,
+      "priors": 209
+     },
+     "priors": 0.053783981728841856,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.055408279043728026,
+     "juv": -0.0,
+     "min_donors": {
+      "charge": 21,
+      "juv": 11,
+      "priors": 100
+     },
+     "priors": 0.09207684170644848,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 16
+  },
+  {
+   "acc": 0.663510101010101,
+   "age_sd_test": 11.809870877690345,
+   "ate": 0.10871670302288144,
+   "cde_all": -0.012259965176736498,
+   "clipped": 0.0,
+   "lam_all": 0.12097666819961794,
+   "last_priors": 0.10736868124741866,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.11187744005477052,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.017792889407337188,
+    "juv": 2.029669155813752e-05,
+    "priors": 0.10316348210072261
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": 0.05315773973756549,
+     "juv": 0.004901114585416422,
+     "min_donors": {
+      "charge": 92,
+      "juv": 92,
+      "priors": 92
+     },
+     "priors": 0.11876312110239307,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": 0.05073166046943567,
+     "juv": 0.008761924332109705,
+     "min_donors": {
+      "charge": 164,
+      "juv": 164,
+      "priors": 164
+     },
+     "priors": 0.14278706571466548,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": 0.04836250105440737,
+     "juv": 0.0065676273841105415,
+     "min_donors": {
+      "charge": 343,
+      "juv": 343,
+      "priors": 343
+     },
+     "priors": 0.09968239288353253,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": 0.03420253130269574,
+     "juv": 0.00286778699341661,
+     "min_donors": {
+      "charge": 31,
+      "juv": 21,
+      "priors": 52
+     },
+     "priors": 0.12677782321340203,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": 0.05111596212288072,
+     "juv": 0.0030001463931124683,
+     "min_donors": {
+      "charge": 57,
+      "juv": 32,
+      "priors": 95
+     },
+     "priors": 0.15735588823328067,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": 0.052621048799167236,
+     "juv": 0.0016362787676407753,
+     "min_donors": {
+      "charge": 135,
+      "juv": 77,
+      "priors": 202
+     },
+     "priors": 0.09700274272301723,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": 0.02659472892080922,
+     "juv": 1.1102230246251565e-16,
+     "min_donors": {
+      "charge": 15,
+      "juv": 11,
+      "priors": 95
+     },
+     "priors": 0.15735588823328067,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 17
+  },
+  {
+   "acc": 0.672979797979798,
+   "age_sd_test": 11.538701654808733,
+   "ate": 0.06058471954321648,
+   "cde_all": -0.00987715321695587,
+   "clipped": 0.0,
+   "lam_all": 0.07046187276017235,
+   "last_priors": 0.0669351831441396,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.0914588792695713,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": 0.0011615551438981984,
+    "juv": -8.094304784451545e-05,
+    "priors": 0.06938126066411866
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.00797194805501561,
+     "juv": 0.006710674205041012,
+     "min_donors": {
+      "charge": 111,
+      "juv": 111,
+      "priors": 111
+     },
+     "priors": 0.07838816867166154,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.007276746139071255,
+     "juv": 0.006279670949222882,
+     "min_donors": {
+      "charge": 180,
+      "juv": 180,
+      "priors": 180
+     },
+     "priors": 0.08853947069880996,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.007839237507423769,
+     "juv": 0.0048220462145692755,
+     "min_donors": {
+      "charge": 359,
+      "juv": 359,
+      "priors": 359
+     },
+     "priors": 0.05905353058105206,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.01333190788008437,
+     "juv": 0.0004099742684600116,
+     "min_donors": {
+      "charge": 46,
+      "juv": 28,
+      "priors": 67
+     },
+     "priors": 0.05222646863328595,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.011639490195737179,
+     "juv": 0.0006149614026894068,
+     "min_donors": {
+      "charge": 76,
+      "juv": 46,
+      "priors": 108
+     },
+     "priors": 0.07148643770378937,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.007949068207264154,
+     "juv": 0.0004315518615366498,
+     "min_donors": {
+      "charge": 166,
+      "juv": 106,
+      "priors": 220
+     },
+     "priors": 0.05654583285105885,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.011239194624907134,
+     "juv": 1.6653345369377348e-16,
+     "min_donors": {
+      "charge": 31,
+      "juv": 22,
+      "priors": 108
+     },
+     "priors": 0.07148643770378937,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 18
+  },
+  {
+   "acc": 0.6881313131313131,
+   "age_sd_test": 11.932443165260093,
+   "ate": 0.09798361130561639,
+   "cde_all": 0.05738758870586147,
+   "clipped": 0.0,
+   "lam_all": 0.04059602259975492,
+   "last_priors": 0.03520777523334673,
+   "majority": 0.5296717171717171,
+   "n_test": 1584,
+   "pair_gap": -0.04437236354503005,
+   "pe_priors_largest": 1.0,
+   "phi": {
+    "charge": -0.0037815479827312346,
+    "juv": 0.0003436279796022364,
+    "priors": 0.044033942602883916
+   },
+   "pw": {
+    "age_only_0.2": {
+     "charge": -0.02292484867747513,
+     "juv": 0.0044883323230331396,
+     "min_donors": {
+      "charge": 102,
+      "juv": 102,
+      "priors": 102
+     },
+     "priors": 0.07660874000775009,
+     "priors_largest": 1.0
+    },
+    "age_only_0.4": {
+     "charge": -0.023524111010385595,
+     "juv": 0.004871559223410871,
+     "min_donors": {
+      "charge": 166,
+      "juv": 166,
+      "priors": 166
+     },
+     "priors": 0.06874807153659723,
+     "priors_largest": 1.0
+    },
+    "age_only_0.8": {
+     "charge": -0.023633785274203845,
+     "juv": 0.0011703211618513953,
+     "min_donors": {
+      "charge": 349,
+      "juv": 349,
+      "priors": 349
+     },
+     "priors": 0.04646478986234587,
+     "priors_largest": 1.0
+    },
+    "matched_0.2": {
+     "charge": -0.03270596261590292,
+     "juv": -0.0,
+     "min_donors": {
+      "charge": 42,
+      "juv": 25,
+      "priors": 60
+     },
+     "priors": 0.07694069151481797,
+     "priors_largest": 1.0
+    },
+    "matched_0.4": {
+     "charge": -0.027044806997098103,
+     "juv": -0.00019917184710960267,
+     "min_donors": {
+      "charge": 68,
+      "juv": 39,
+      "priors": 103
+     },
+     "priors": 0.0679090841434985,
+     "priors_largest": 1.0
+    },
+    "matched_0.8": {
+     "charge": -0.027569544926845435,
+     "juv": 0.0007207821738499098,
+     "min_donors": {
+      "charge": 145,
+      "juv": 93,
+      "priors": 218
+     },
+     "priors": 0.04493651983160418,
+     "priors_largest": 1.0
+    },
+    "matched_exact_0.4": {
+     "charge": -0.03553978226074628,
+     "juv": -5.551115123125783e-17,
+     "min_donors": {
+      "charge": 34,
+      "juv": 20,
+      "priors": 103
+     },
+     "priors": 0.0679090841434985,
+     "priors_largest": 1.0
+    }
+   },
+   "seed": 19
+  }
+ ],
+ "summary": {
+  "acc": {
+   "max": 0.6881313131313131,
+   "mean": 0.6722222222222222,
+   "min": 0.6603535353535354,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.008225197746005598
+  },
+  "age_sd_test": {
+   "max": 12.005034676370673,
+   "mean": 11.69833263208365,
+   "min": 11.349309606792268,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.16882788245128358
+  },
+  "ate": {
+   "max": 0.12298023898156946,
+   "mean": 0.09391720864431723,
+   "min": 0.06058471954321648,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.015553114682445475
+  },
+  "cde_all": {
+   "max": 0.05738758870586147,
+   "mean": 0.01346097398493833,
+   "min": -0.012259965176736498,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 7,
+   "pos": 13,
+   "sd": 0.019200207788994363
+  },
+  "clipped": {
+   "max": 0.0,
+   "mean": 0.0,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 0,
+   "sd": 0.0
+  },
+  "lam_all": {
+   "max": 0.12097666819961794,
+   "mean": 0.0804562346593789,
+   "min": 0.03805023300251803,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.021154072697998173
+  },
+  "last_priors": {
+   "max": 0.10736868124741866,
+   "mean": 0.0727832174115511,
+   "min": 0.03520777523334673,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.018511010621050816
+  },
+  "majority": {
+   "max": 0.5296717171717171,
+   "mean": 0.5296717171717169,
+   "min": 0.5296717171717171,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 2.278129578503827e-16
+  },
+  "n_test": {
+   "max": 1584.0,
+   "mean": 1584.0,
+   "min": 1584.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.0
+  },
+  "pair_gap": {
+   "max": 0.049346699113664905,
+   "mean": -0.04454090280251123,
+   "min": -0.11187744005477052,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 18,
+   "pos": 2,
+   "sd": 0.03726983681901894
+  },
+  "pe_priors_largest": {
+   "max": 1.0,
+   "mean": 1.0,
+   "min": 1.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.0
+  },
+  "phi.charge": {
+   "max": 0.017792889407337188,
+   "mean": 0.0047200479868564175,
+   "min": -0.008831237787756277,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 6,
+   "pos": 14,
+   "sd": 0.006930559156619301
+  },
+  "phi.juv": {
+   "max": 0.0041723457973993905,
+   "mean": 0.0002783922296989246,
+   "min": -0.0035068278629582965,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 9,
+   "pos": 11,
+   "sd": 0.002039236707672761
+  },
+  "phi.priors": {
+   "max": 0.10316348210072261,
+   "mean": 0.07545779444282355,
+   "min": 0.04372780162647395,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 0.015650039698136123
+  },
+  "pw.age_only_0.2.charge": {
+   "max": 0.05315773973756549,
+   "mean": -0.007729248749659051,
+   "min": -0.04571840293462698,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 15,
+   "pos": 5,
+   "sd": 0.022498153678622367
+  },
+  "pw.age_only_0.2.juv": {
+   "max": 0.01940879691459474,
+   "mean": 0.006481846077585393,
+   "min": -0.000441560585289269,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.004962437239697543
+  },
+  "pw.age_only_0.2.min_donors.charge": {
+   "max": 111.0,
+   "mean": 98.0,
+   "min": 83.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.739169002037961
+  },
+  "pw.age_only_0.2.min_donors.juv": {
+   "max": 111.0,
+   "mean": 98.0,
+   "min": 83.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.739169002037961
+  },
+  "pw.age_only_0.2.min_donors.priors": {
+   "max": 111.0,
+   "mean": 98.0,
+   "min": 83.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.739169002037961
+  },
+  "pw.age_only_0.2.priors": {
+   "max": 0.14749309042240666,
+   "mean": 0.08099616003091434,
+   "min": -0.018519451229120465,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.03507125492072493
+  },
+  "pw.age_only_0.2.priors_largest": {
+   "max": 1.0,
+   "mean": 0.95,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 0.22360679774997902
+  },
+  "pw.age_only_0.4.charge": {
+   "max": 0.05073166046943567,
+   "mean": -0.007755731651343306,
+   "min": -0.042532459521946675,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 15,
+   "pos": 5,
+   "sd": 0.021683065050283626
+  },
+  "pw.age_only_0.4.juv": {
+   "max": 0.011459817030288977,
+   "mean": 0.005727593309220116,
+   "min": -0.0007585627469794964,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.0032866308755751758
+  },
+  "pw.age_only_0.4.min_donors.charge": {
+   "max": 185.0,
+   "mean": 170.85,
+   "min": 158.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 8.183905900575452
+  },
+  "pw.age_only_0.4.min_donors.juv": {
+   "max": 185.0,
+   "mean": 170.85,
+   "min": 158.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 8.183905900575452
+  },
+  "pw.age_only_0.4.min_donors.priors": {
+   "max": 185.0,
+   "mean": 170.85,
+   "min": 158.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 8.183905900575452
+  },
+  "pw.age_only_0.4.priors": {
+   "max": 0.14278706571466548,
+   "mean": 0.09156274215791896,
+   "min": -0.0030401551291675544,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.03052846457627808
+  },
+  "pw.age_only_0.4.priors_largest": {
+   "max": 1.0,
+   "mean": 0.95,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 0.22360679774997902
+  },
+  "pw.age_only_0.8.charge": {
+   "max": 0.04836250105440737,
+   "mean": -0.008060869873773333,
+   "min": -0.0435674365289247,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 16,
+   "pos": 4,
+   "sd": 0.02074312575885563
+  },
+  "pw.age_only_0.8.juv": {
+   "max": 0.008003912510505917,
+   "mean": 0.0033628108871648936,
+   "min": -0.0022963332030880856,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 2,
+   "pos": 18,
+   "sd": 0.002830093023107707
+  },
+  "pw.age_only_0.8.min_donors.charge": {
+   "max": 377.0,
+   "mean": 355.45,
+   "min": 334.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 12.93902705200942
+  },
+  "pw.age_only_0.8.min_donors.juv": {
+   "max": 377.0,
+   "mean": 355.45,
+   "min": 334.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 12.93902705200942
+  },
+  "pw.age_only_0.8.min_donors.priors": {
+   "max": 377.0,
+   "mean": 355.45,
+   "min": 334.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 12.93902705200942
+  },
+  "pw.age_only_0.8.priors": {
+   "max": 0.09968239288353253,
+   "mean": 0.059441353948130604,
+   "min": -0.022685727022992097,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.025826021659382768
+  },
+  "pw.age_only_0.8.priors_largest": {
+   "max": 1.0,
+   "mean": 0.95,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 0.22360679774997902
+  },
+  "pw.matched_0.2.charge": {
+   "max": 0.03868473938688499,
+   "mean": -0.01651920927312232,
+   "min": -0.06946944549632722,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 18,
+   "pos": 2,
+   "sd": 0.024014227685773985
+  },
+  "pw.matched_0.2.juv": {
+   "max": 0.0037669985314532917,
+   "mean": -0.00010600091858223026,
+   "min": -0.004508183017103207,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 10,
+   "pos": 7,
+   "sd": 0.0018274208685862227
+  },
+  "pw.matched_0.2.min_donors.charge": {
+   "max": 51.0,
+   "mean": 39.7,
+   "min": 30.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 5.6484744097760355
+  },
+  "pw.matched_0.2.min_donors.juv": {
+   "max": 35.0,
+   "mean": 23.9,
+   "min": 17.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 3.878415303079067
+  },
+  "pw.matched_0.2.min_donors.priors": {
+   "max": 71.0,
+   "mean": 57.9,
+   "min": 47.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 6.504249622969182
+  },
+  "pw.matched_0.2.priors": {
+   "max": 0.16088264449447248,
+   "mean": 0.07362482045383892,
+   "min": -0.04149448590582705,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.04379297220799216
+  },
+  "pw.matched_0.2.priors_largest": {
+   "max": 1.0,
+   "mean": 0.85,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 17,
+   "sd": 0.36634754853252327
+  },
+  "pw.matched_0.4.charge": {
+   "max": 0.05111596212288072,
+   "mean": -0.012316581737836122,
+   "min": -0.05070157090295735,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 17,
+   "pos": 3,
+   "sd": 0.024063662587348867
+  },
+  "pw.matched_0.4.juv": {
+   "max": 0.003641431913738391,
+   "mean": -4.870196160973728e-05,
+   "min": -0.0018935561806807666,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 12,
+   "pos": 7,
+   "sd": 0.001357818363254258
+  },
+  "pw.matched_0.4.min_donors.charge": {
+   "max": 84.0,
+   "mean": 69.55,
+   "min": 57.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.272695873137959
+  },
+  "pw.matched_0.4.min_donors.juv": {
+   "max": 55.0,
+   "mean": 41.3,
+   "min": 32.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 5.4202349919926025
+  },
+  "pw.matched_0.4.min_donors.priors": {
+   "max": 118.0,
+   "mean": 102.15,
+   "min": 90.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.713794888311938
+  },
+  "pw.matched_0.4.priors": {
+   "max": 0.15735588823328067,
+   "mean": 0.09052371326656794,
+   "min": -0.011055262058780546,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.03349230458375888
+  },
+  "pw.matched_0.4.priors_largest": {
+   "max": 1.0,
+   "mean": 0.95,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 0.22360679774997902
+  },
+  "pw.matched_0.8.charge": {
+   "max": 0.052621048799167236,
+   "mean": -0.01038208891853432,
+   "min": -0.0479201656985776,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 17,
+   "pos": 3,
+   "sd": 0.022356006263221106
+  },
+  "pw.matched_0.8.juv": {
+   "max": 0.0066687608451654334,
+   "mean": 0.00015671236600401094,
+   "min": -0.004127452813647403,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 10,
+   "pos": 10,
+   "sd": 0.002097432454080864
+  },
+  "pw.matched_0.8.min_donors.charge": {
+   "max": 166.0,
+   "mean": 145.65,
+   "min": 129.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 8.934115571931649
+  },
+  "pw.matched_0.8.min_donors.juv": {
+   "max": 108.0,
+   "mean": 92.15,
+   "min": 74.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 8.652806055354468
+  },
+  "pw.matched_0.8.min_donors.priors": {
+   "max": 235.0,
+   "mean": 215.65,
+   "min": 185.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 12.844310638935578
+  },
+  "pw.matched_0.8.priors": {
+   "max": 0.09700274272301723,
+   "mean": 0.05502083694387787,
+   "min": -0.036245014451681046,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.026702631568973845
+  },
+  "pw.matched_0.8.priors_largest": {
+   "max": 1.0,
+   "mean": 0.95,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 0.22360679774997902
+  },
+  "pw.matched_exact_0.4.charge": {
+   "max": 0.04132861307623087,
+   "mean": -0.014021402781600387,
+   "min": -0.055408279043728026,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 17,
+   "pos": 3,
+   "sd": 0.022660148709758725
+  },
+  "pw.matched_exact_0.4.juv": {
+   "max": 0.006827684838259185,
+   "mean": 0.00017789051202587446,
+   "min": -0.0025948732846368117,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 11,
+   "pos": 7,
+   "sd": 0.0017415803970299085
+  },
+  "pw.matched_exact_0.4.min_donors.charge": {
+   "max": 34.0,
+   "mean": 23.1,
+   "min": 15.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 4.266145801540309
+  },
+  "pw.matched_exact_0.4.min_donors.juv": {
+   "max": 22.0,
+   "mean": 14.65,
+   "min": 10.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 3.6168465473902014
+  },
+  "pw.matched_exact_0.4.min_donors.priors": {
+   "max": 118.0,
+   "mean": 102.15,
+   "min": 90.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 20,
+   "sd": 7.713794888311938
+  },
+  "pw.matched_exact_0.4.priors": {
+   "max": 0.15735588823328067,
+   "mean": 0.09052371326656794,
+   "min": -0.011055262058780546,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 1,
+   "pos": 19,
+   "sd": 0.03349230458375888
+  },
+  "pw.matched_exact_0.4.priors_largest": {
+   "max": 1.0,
+   "mean": 0.95,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 0.22360679774997902
+  },
+  "seed": {
+   "max": 19.0,
+   "mean": 9.5,
+   "min": 0.0,
+   "n": 20,
+   "n_missing": 0,
+   "neg": 0,
+   "pos": 19,
+   "sd": 5.916079783099616
+  }
+ }
+}

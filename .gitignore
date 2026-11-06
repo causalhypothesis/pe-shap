@@ -1,0 +1,5 @@
+code/data/*.csv
+results_fast/
+__pycache__/
+.pytest_cache/
+.venv/
