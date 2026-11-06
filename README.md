@@ -43,7 +43,7 @@ Without the data files, the data test (T7) is left out.
 | `experiments/exp6_graphs.py` | COMPAS, other graphs and the age adjustment | `results/exp6.json` |
 | `experiments/exp7_faithfulness.py` | COMPAS, faithfulness | `results/exp7.json` |
 | `experiments/exp8_german.py` | German Credit | `results/exp8.json` |
-| `experiments/exp_two_chains.py` | two interacting chains | `results/exp_two_chains.json` |
+| `experiments/exp_two_chains.py` | two interacting chains (an extra example, not in the final paper) | `results/exp_two_chains.json` |
 
 Run a script with, for example,
 
@@ -62,8 +62,8 @@ To reprint the table cells from the saved results:
     python experiments/exp2_local.py --print
 
 The other experiments' numbers are in the `summary` block of their result files. `--ideal`
-(exp1, exp2, exp_two_chains) writes the closed-form values that the tables show in brackets
-(`results/*_ideal.json`).
+(exp1, exp2, exp_two_chains) writes the closed-form values to `results/*_ideal.json`. For exp1
+and exp2 these are the values that the tables show in brackets.
 
 ## Citation
 
